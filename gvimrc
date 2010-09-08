@@ -6,8 +6,8 @@ if &background == "dark"
     hi normal guibg=black
     set transp=1
 endif
-#set gfn=Menlo\ Regular:h13
-set guifont=DejaVu\ Sans\ Mono:h13
+set gfn=Menlo\ Regular:h13
+"set guifont=DejaVu\ Sans\ Mono:h13
 set guioptions=egmrt
 set showtabline=2
 " Full screen should be full screen
