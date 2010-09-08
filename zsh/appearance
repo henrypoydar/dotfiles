@@ -1,0 +1,44 @@
+# ls colors
+
+autoload colors; colors;
+export LSCOLORS="Gxfxcxdxbxegedabagacad"
+
+if [ "$DISABLE_LS_COLORS" != "true" ]
+then
+  # Find the option for using colors in ls, depending on the version: Linux or BSD
+  ls --color -d . &>/dev/null 2>&1 && alias ls='ls --color=tty' || alias ls='ls -G'
+fi
+
+#setopt no_beep
+setopt auto_cd
+setopt multios
+setopt cdablevarS
+
+if [[ x$WINDOW != x ]]
+then
+    SCREEN_NO="%B$WINDOW%b "
+else
+    SCREEN_NO=""
+fi
+
+# Prompt
+
+PS1="%n@%m:%~%# "
+
+ZSH_GIT_PROMPT_DIRTY="*"              # Text to display if the branch is dirty
+ZSH_GIT_PROMPT_CLEAN=""               # Text to display if the branch is clean
+
+# Setup the prompt with pretty colors
+setopt prompt_subst
+
+# Override prompts
+local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
+ 
+PROMPT='%{$fg[white]%}%~%{$reset_color%} $(git_prompt_info)%{$reset_color%}%B$%b '
+RPS1="${return_code}"
+ 
+ZSH_GIT_PROMPT_PREFIX="%{$fg[green]%}‹"
+ZSH_GIT_PROMPT_SUFFIX="› %{$reset_color%}"
+
+RPROMPT='%{$fg[red]%}$(rvm_prompt_info)%{$reset_color%}%'
+
