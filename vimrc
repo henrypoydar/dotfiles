@@ -1,211 +1,120 @@
-" based on http://github.com/jferris/config_files/blob/master/vimrc
-
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
+no vi compatibility
 set nocompatible
 
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
+" Show position in file
+set ruler
 
-set nobackup
-set nowritebackup
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
+" Show line numbers
+set number
 
-" Don't use Ex mode, use Q for formatting
-map Q gq
+" Show $ at end of line and trailing space as ~
+set lcs=tab:\ \ ,eol:$,trail:~,extends:>,precedes:<
+set novisualbell  " No blinking .
+set noerrorbells  " No noise.
+set laststatus=2  " Always show status line.
 
-" This is an alternative that also works in block mode, but the deleted
-" text is lost and it only works for putting the current register.
-"vnoremap p "_dp
+" Use 2 spaces for tabs, turn on automatic indenting
+set tabstop=2
+set smarttab
+set shiftwidth=2
+set autoindent
+set expandtab
+set backspace=start,indent
 
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
-  syntax on
-  set hlsearch
-endif
+" Turn on virtual editing
+set virtualedit=all
 
-" Switch wrap off for everything
+" Turn off wrapping
 set nowrap
 
-" Only do this part when compiled with support for autocommands.
-if has("autocmd")
-  " Enable file type detection.
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  filetype plugin indent on
+" Turn on highlighted search and syntax highlighting
+set hlsearch
+set incsearch
+syntax on
 
-  " Set File type to 'text' for files ending in .txt
-  autocmd BufNewFile,BufRead *.txt setfiletype text
+" Stick in lines below and above cursor
+set scrolloff=10
 
-  " Enable soft-wrapping for text files
-  autocmd FileType text,markdown,html,xhtml,eruby setlocal wrap linebreak nolist
+" Turn on line highlighting
+" set cursorline " Commented out due to poor performance
 
-  " Put these in an autocmd group, so that we can delete them easily.
-  augroup vimrcEx
-  au!
+" bind control-l to hashrocket
+imap <C-l> <Space>=><Space>
 
-  " For all text files set 'textwidth' to 78 characters.
-  " autocmd FileType text setlocal textwidth=78
-
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
-
-  " Automatically load .vimrc source when saved
-  autocmd BufWritePost .vimrc source $MYVIMRC
-
-  augroup END
-
-else
-
-  set autoindent		" always set autoindenting on
-
-endif " has("autocmd")
-
-" if has("folding")
-  " set foldenable
-  " set foldmethod=syntax
-  " set foldlevel=1
-  " set foldnestmax=2
-  " set foldtext=strpart(getline(v:foldstart),0,50).'\ ...\ '.substitute(getline(v:foldend),'^[\ #]*','','g').'\ '
-" endif
-
-" Softtabs, 2 spaces
-set tabstop=2
-set shiftwidth=2
-set expandtab
-
-" Always display the status line
-set laststatus=2
-
-" \ is the leader character
+" Set leader to comma
 let mapleader = ","
 
-" Edit the README_FOR_APP (makes :R commands work)
-map <Leader>R :e doc/README_FOR_APP<CR>
+" Set up commands for FuzzyFinder and FuzzyFinderTextMate
+map <leader>g :FuzzyFinderTextMate<CR>
+map <leader>b :FuzzyFinderBuffer<CR>
+map <leader>f :FuzzyFinderFile<CR>
+map <leader>r :FuzzyFinderMruFile<CR>
+map <leader>R :ruby finder.rescan!<CR>:FuzzyFinderRemoveCache<CR>:exe ":echo 'rescan complete'"<CR>
 
-" Leader shortcuts for Rails commands
-map <Leader>m :Rmodel 
-map <Leader>c :Rcontroller 
-map <Leader>v :Rview 
-map <Leader>u :Runittest 
-map <Leader>f :Rfunctionaltest 
-map <Leader>tm :RTmodel 
-map <Leader>tc :RTcontroller 
-map <Leader>tv :RTview 
-map <Leader>tu :RTunittest 
-map <Leader>tf :RTfunctionaltest 
-map <Leader>sm :RSmodel 
-map <Leader>sc :RScontroller 
-map <Leader>sv :RSview 
-map <Leader>su :RSunittest 
-map <Leader>sf :RSfunctionaltest 
+" Fuzzy options
+let g:fuzzy_ignore = "vendor/**/*,tmp/**/*,*.log,.bundle/**/*,lock/**/*,relock/**/*"
+let g:fuzzy_matching_limit = 30
 
-" Hide search highlighting
-map <Leader>h :set invhls <CR>
+" Set up command for NERDTree
+map <leader>n :NERDTree<CR>
 
-" Opens an edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>e
-map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+" NERDTree options
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeIgnore = ['\~$', '\.git$', '\.swp$', '\.DS_Store$']
 
-" Opens a tab edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
+" Map ack
+map <leader>a :Ack<space>
 
-" Move lines up and down
-map <C-J> :m +1 <CR>
-map <C-K> :m -2 <CR>
+" Make backspace work the way it should
+set backspace=2
 
-" Inserts the path of the currently edited file into a command
-" Command mode: Ctrl+P
-cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+" Make backspace and cursor keys wrap accordingly"
+set whichwrap+=<,>,h,l
 
-" Duplicate a selection
-" Visual mode: D
-vmap D y'>p
-
-" Press Shift+P while in visual mode to replace the selection without
-" overwriting the default register
-vmap P p :call setreg('"', getreg('0')) <CR>
-
-" For Haml
-au! BufRead,BufNewFile *.haml         setfiletype haml
-
-" No Help, please
-nmap <F1> <Esc>
-
-" Press ^F from insert mode to insert the current file name
-imap <C-F> <C-R>=expand("%")<CR>
-
-" Maps autocomplete to tab
-imap <Tab> <C-N>
-
-imap <C-L> <Space>=><Space>
-
-" Display extra whitespace
-" set list listchars=tab:»·,trail:·
-
-" Edit routes
-command! Rroutes :e config/routes.rb
-command! Rschema :e db/schema.rb
-
-" Local config
-if filereadable(".vimrc.local")
-  source .vimrc.local
-endif
-
-" Use Ack instead of Grep when available
-if executable("ack")
-  set grepprg=ack\ -H\ --nogroup\ --nocolor\ --ignore-dir=tmp\ --ignore-dir=coverage
-endif
-
-" Color scheme
-" colorscheme vividchalk
-" highlight NonText guibg=#060606
-" highlight Folded  guibg=#0A0A0A guifg=#9090D0
-
-" Numbers
-set number
-set numberwidth=5
-
-" Snippets are activated by Shift+Tab
-let g:snippetsEmu_key = "<S-Tab>"
-
-" Tab completion options
-" (only complete to the longest unambiguous match, and show a menu)
-set completeopt=longest,menu
-set wildmode=list:longest,list:full
-set complete=.,t
-
-" case only matters with mixed case expressions
+" Make searches case-insensitive
 set ignorecase
-set smartcase
 
-" Tags
-let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
-set tags=./tags;
+" Make editing .vimrc easier
+map <leader>v :sp ~/.vimrc<CR>
+map <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
-let g:fuf_splitPathMatching=1
+" Generate a tags file in the current directory using Exuberant ctags
+map <leader>e :silent :! ctags --recurse --sort=yes;sort tags > tmptags;mv tmptags tags<CR>:exe ":echo 'tags generated'"<CR>
 
-" Open URL
-command -bar -nargs=1 OpenURL :!open <args>
-function! OpenURL()
-  let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;:]*')
-  echo s:uri
-  if s:uri != ""
-	  exec "!open \"" . s:uri . "\""
-  else
-	  echo "No URI found in line."
-  endif
+filetype plugin indent on
+
+function! AckGrep(command)
+  cexpr system("ack -a" . a:command)
+  cw
 endfunction
-map <Leader>w :call OpenURL()<CR>
 
+command! -nargs=+ -complete=file Ack call AckGrep(<q-args>)
+
+map <leader>a :Ack<space>
+
+" map grep to ack
+set grepprg=ack\ -a
+
+" Add a status line by default
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+"set laststatus=2
+" Session saving
+set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
+
+" Invisible characters *********************************************************
+"set listchars=trail:.,tab:>-,eol:¬
+set listchars=tab:>-,eol:¬
+set list
+:noremap ,i :set list!<CR> " Toggle invisible chars"
+
+" Omni Completion
+" *************************************************************
+autocmd FileType html :set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c set omnifunc=ccomplete#Complete
+" May require ruby compiled in
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
