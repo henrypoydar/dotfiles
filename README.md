@@ -1,16 +1,17 @@
-= Ryan Bates Dot Files
+# Henry Poydar Dot Files
 
 These are config files to set up a system the way I like it.
 
+Forked from Ryan Bates, with pastes from Robby Russel's oh-my-zsh effort.
 
-== Installation
+## Installation
 
   git clone git://github.com/ryanb/dotfiles ~/.dotfiles
   cd ~/.dotfiles
   rake install
 
 
-== Environment
+## Environment
 
 I am running on Mac OS X, but it will likely work on Linux as well with 
 minor fiddling. I primarily use zsh, but this includes some older bash 
