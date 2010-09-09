@@ -1,13 +1,12 @@
-[user]
-	name = Henry Poydar
-	email = hpoydar@gmail.com
 [alias]
-	co = checkout
-	st = status
+  co = checkout
+  st = status
   co = checkout
   sub = submodule
   br = branch
   bl = blame
+[apply]
+  whitespace = nowarn
 [color]
   branch = auto
   diff = auto
@@ -26,13 +25,14 @@
   changed = yellow
   untracked = cyan
 [core]
-	excludesfile = <%= ENV['HOME'] %>/.gitignore
-	editor = mate -w
-	autocrlf = input
-[apply]
-	whitespace = nowarn
+  excludesfile = <%= ENV['HOME'] %>/.gitignore
+  editor = mvim
+  autocrlf = input
 [format]
-	pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
+  pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
 [github]
-	user = hpoydar
-	token = 544f0c5739b33d57e8f6955999d17920
+  user = hpoydar
+  token = 544f0c5739b33d57e8f6955999d17920
+[user]
+  name = Henry Poydar
+  email = hpoydar@gmail.com
