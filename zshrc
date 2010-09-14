@@ -3,9 +3,7 @@
 . ~/.zsh/completion
 . ~/.zsh/appearance
 . ~/.zsh/terminal
-
-# Use .localrc for settings specific to one system
-[[ -f ~/.localrc ]] && .  ~/.localrc
+. ~/.zsh/sources
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  
