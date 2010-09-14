@@ -42,3 +42,8 @@ ZSH_GIT_PROMPT_SUFFIX="› %{$reset_color%}"
 
 RPROMPT='%{$fg[red]%}$(rvm_prompt_info)%{$reset_color%}%'
 
+# Skip it all if we're within vim
+if [[ -n $VIMRUNTIME ]]; then
+  PROMPT="$ "
+  RPROMPT=""
+fi
