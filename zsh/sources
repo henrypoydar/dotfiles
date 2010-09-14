@@ -1,0 +1,6 @@
+# Use .localrc for settings specific to one system
+[[ -f ~/.localrc ]] && .  ~/.localrc
+
+# REE 
+.  ~/.reerc
+
