@@ -11,6 +11,10 @@ and devjj's vim-config effort.
     cd ~/dotfiles
     rake install
 
+## Notes
+
+MacVim versions later than snapshot 51 seems to break NERDTree fuzzy finder
+
 ## Privacy
 
 There is some sensitive stuff in this repo, necessitated by convenience. Keep it private.
