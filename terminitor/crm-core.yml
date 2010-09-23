@@ -1,0 +1,17 @@
+# work/bantam/crmcore
+---
+- tab1:
+  - cd ~/work/bantam/crm-core
+  - rvm --default ree
+  - gst
+  - mvim .
+  - clear
+- tab2:
+  - cd ~/work/bantam/crm-core
+  - script/server
+- tab3:
+  - cd ~/work/bantam/crm-core
+  - script/console
+- tab4: 
+  - cd ~/work/bantam/crm-core
+  - tail -f log/development.log
