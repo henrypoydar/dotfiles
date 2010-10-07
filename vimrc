@@ -44,12 +44,12 @@ imap <C-l> <Space>=><Space>
 " Set leader to comma
 let mapleader = ","
 
-" Set up commands for FuzzyFinder and FuzzyFinderTextMate
-map <leader>g :FuzzyFinderTextMate<CR>
-map <leader>b :FuzzyFinderBuffer<CR>
-map <leader>f :FuzzyFinderFile<CR>
-map <leader>r :FuzzyFinderMruFile<CR>
-map <leader>R :ruby finder.rescan!<CR>:FuzzyFinderRemoveCache<CR>:exe ":echo 'rescan complete'"<CR>
+" Set up commands for FuzzyFinder 
+map <leader>g :FufFile<CR>
+map <leader>b :FufBuffer<CR>
+map <leader>f :FufFile<CR>
+map <leader>r :FufMruFile<CR>
+"map <leader>R :ruby finder.rescan!<CR>:FuzzyFinderRemoveCache<CR>:exe ":echo 'rescan complete'"<CR>
 
 " Fuzzy options
 let g:fuzzy_ignore = "vendor/**/*,tmp/**/*,*.log,.bundle/**/*,lock/**/*,relock/**/*"
