@@ -1,3 +1,4 @@
+. ~/.zsh/bindings
 . ~/.zsh/config
 . ~/.zsh/aliases
 . ~/.zsh/completion
