@@ -1,114 +1,62 @@
-no vi compatibility
-set nocompatible
-
-" Show position in file
-set ruler
-
-" Show line numbers
-set number
-
-" Show $ at end of line and trailing space as ~
-set lcs=tab:\ \ ,eol:$,trail:~,extends:>,precedes:<
-set novisualbell  " No blinking .
-set noerrorbells  " No noise.
-set laststatus=2  " Always show status line.
-
-" Use 2 spaces for tabs, turn on automatic indenting
-set tabstop=2
-set smarttab
-set shiftwidth=2
 set autoindent
+set backspace=indent,eol,start     " Behave, backspace
 set expandtab
-set backspace=start,indent
-
-" Turn on virtual editing
-set virtualedit=all
-
-" Turn off wrapping
-set nowrap
-
-" Turn on highlighted search and syntax highlighting
-set hlsearch
+set hlsearch                       " Turn on highlighted search
+set ignorecase                     " Ignore case on search
 set incsearch
-syntax on
+set laststatus=2                   " Always show status line
+set list                           " Handle invisible characters
+set listchars=tab:▸\ ,eol:¬
+set nocompatible                   " No vi compatibility
+set noerrorbells                   " No noise.
+set novisualbell                   " No blinking .
+set nowrap                         " Turn off wrapping
+set number                         " Show line numbers
+set ruler                          " Show position in file
+set smarttab                       " Turn on automatic indenting
+set shiftwidth=2
+set scrolloff=10                   " Stick in lines below and above cursor
+set tabstop=2                      " Use 2 spaces for tabs
+set virtualedit=all                " Turn on virtual editing
+set whichwrap+=<,>,h,l             " Make backspace and cursor keys wrap accordingly
+set undofile                       " Persist undo
+syntax on                          " Enable syntax highlighting
 
-" Stick in lines below and above cursor
-set scrolloff=10
+" Save open file if focus is lost
+au FocusLost * :wa
 
-" Turn on line highlighting
-" set cursorline " Commented out due to poor performance
-
-" bind control-l to hashrocket
-imap <C-l> <Space>=><Space>
-
-" Set leader to comma
+" Leader bindings, comma is leader
 let mapleader = ","
-
-" Set up commands for FuzzyFinder 
+map <leader>a :Ack<space>
 map <leader>g :FufFile<CR>
 map <leader>b :FufBuffer<CR>
 map <leader>f :FufFile<CR>
 map <leader>r :FufMruFile<CR>
-"map <leader>R :ruby finder.rescan!<CR>:FuzzyFinderRemoveCache<CR>:exe ":echo 'rescan complete'"<CR>
-
-" Fuzzy options
-let g:fuzzy_ignore = "vendor/**/*,tmp/**/*,*.log,.bundle/**/*,lock/**/*,relock/**/*"
-let g:fuzzy_matching_limit = 30
-
-" Set up command for NERDTree
 map <leader>n :NERDTree<CR>
+
+" Strip all trailing whitespace
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" Hard wrap text
+nnoremap <leader>q gqip
+
+" Hashrocket mapping
+imap <C-l> <Space>=><Space>
+
+" Escape via jj
+inoremap jj <ESC>
 
 " NERDTree options
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeIgnore = ['\~$', '\.git$', '\.swp$', '\.DS_Store$']
 
-" Map ack
-map <leader>a :Ack<space>
-
-" Make backspace work the way it should
-set backspace=2
-
-" Make backspace and cursor keys wrap accordingly"
-set whichwrap+=<,>,h,l
-
-" Make searches case-insensitive
-set ignorecase
-
-" Make editing .vimrc easier
-map <leader>v :sp ~/.vimrc<CR>
-map <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
-
-" Generate a tags file in the current directory using Exuberant ctags
-map <leader>e :silent :! ctags --recurse --sort=yes;sort tags > tmptags;mv tmptags tags<CR>:exe ":echo 'tags generated'"<CR>
-
+" Change indentation based on file type
 filetype plugin indent on
 
-function! AckGrep(command)
-  cexpr system("ack -a" . a:command)
-  cw
-endfunction
-
-command! -nargs=+ -complete=file Ack call AckGrep(<q-args>)
-
-map <leader>a :Ack<space>
-
-" map grep to ack
-set grepprg=ack\ -a
-
-" Add a status line by default
-"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
-"set laststatus=2
 " Session saving
 set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
 
-" Invisible characters *********************************************************
-"set listchars=trail:.,tab:>-,eol:¬
-set listchars=tab:>-,eol:¬
-set list
-:noremap ,i :set list!<CR> " Toggle invisible chars"
-
 " Omni Completion
-" *************************************************************
 autocmd FileType html :set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
@@ -116,5 +64,4 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
-" May require ruby compiled in
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
