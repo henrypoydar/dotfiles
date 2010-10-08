@@ -2,10 +2,10 @@ set lines=50
 set columns=150
 set linespace=3
 colorscheme ir_black_tweaked
-if &background == "dark"
-    hi normal guibg=black
-    set transp=1
-endif
+"if &background == "dark"
+    ""hi normal guibg=black
+    ""set transp=1
+"endif
 set gfn=Menlo\ Regular:h13
 set guioptions=egmrt
 set guioptions-=r " Don't show right scrollbar
