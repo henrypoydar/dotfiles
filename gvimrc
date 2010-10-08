@@ -1,7 +1,7 @@
 set lines=50
 set columns=150
 set linespace=3
-colorscheme ir_black
+colorscheme ir_black_tweaked
 if &background == "dark"
     hi normal guibg=black
     set transp=1
