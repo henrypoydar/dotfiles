@@ -6,7 +6,7 @@ colorscheme ir_black_tweaked
     ""hi normal guibg=black
     ""set transp=1
 "endif
-set gfn=Menlo\ Regular:h13
+set gfn=Menlo\ Regular:h15
 set guioptions=egmrt
 set guioptions-=r " Don't show right scrollbar
 set showtabline=2
