@@ -19,7 +19,6 @@ set scrolloff=10                   " Stick in lines below and above cursor
 set tabstop=2                      " Use 2 spaces for tabs
 set virtualedit=all                " Turn on virtual editing
 set whichwrap+=<,>,h,l             " Make backspace and cursor keys wrap accordingly
-set undofile                       " Persist undo
 syntax on                          " Enable syntax highlighting
 
 " Save open file if focus is lost
