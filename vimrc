@@ -26,7 +26,7 @@ au FocusLost * :wa
 
 " Leader bindings, comma is leader
 let mapleader = ","
-map <leader>a :Ack<space>
+"map <leader>a :Ack<space>
 map <leader>g :FufFile<CR>
 map <leader>b :FufBuffer<CR>
 map <leader>f :FufFile<CR>
@@ -36,7 +36,7 @@ map <leader>n :NERDTree<CR>
 " Strip all trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
-" Hard wrap text
+" Wrap long text
 nnoremap <leader>q gqip
 
 " Hashrocket mapping
@@ -44,6 +44,8 @@ imap <C-l> <Space>=><Space>
 
 " Escape via jj
 inoremap jj <ESC>
+
+noremap <leader>a :call bg#RunQF([':Ack',input("word to ack for:"),"."],'c')<cr>
 
 " NERDTree options
 let g:NERDTreeShowHidden = 1
