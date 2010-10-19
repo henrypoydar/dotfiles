@@ -26,7 +26,7 @@ au FocusLost * :wa
 
 " Leader bindings, comma is leader
 let mapleader = ","
-"map <leader>a :Ack<space>
+map <leader>a :Ack<space>
 map <leader>g :FufFile<CR>
 map <leader>b :FufBuffer<CR>
 map <leader>f :FufFile<CR>
@@ -44,8 +44,6 @@ imap <C-l> <Space>=><Space>
 
 " Escape via jj
 inoremap jj <ESC>
-
-noremap <leader>a :call bg#RunQF([':Ack',input("word to ack for:"),"."],'c')<cr>
 
 " NERDTree options
 let g:NERDTreeShowHidden = 1
@@ -66,3 +64,4 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+
