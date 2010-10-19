@@ -1,5 +1,5 @@
 set lines=50
-set columns=150
+set columns=136
 set linespace=3
 colorscheme ir_black_tweaked
 set gfn=Menlo\ Regular:h15
