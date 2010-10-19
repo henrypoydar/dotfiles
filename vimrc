@@ -65,3 +65,16 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 
+" Run Rspec for the current spec file
+" Experimental
+function! RunRspec()
+ruby << EOF
+  buffer = VIM::Buffer.current
+  spec_file = VIM::Buffer.current.name
+  command = "rake spec --format=html SPEC=#{spec_file} &"
+  print "Running Rspec for #{spec_file} in the terminal"
+  system(command)
+EOF
+endfunction
+map <leader>r :call RunRspec()<cr>
+
