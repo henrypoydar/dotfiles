@@ -1,0 +1,95 @@
+#!/usr/bin/env ruby -w
+
+require 'tempfile'
+
+class BgRubySpec
+  def initialize(args)
+    print_help if args.empty?
+    @spec_file = nil
+    @spec_type = 'spec'
+    @working_dir = '~'
+    @results_file = Tempfile.new('spec')
+    args.each do |argument|
+      case argument
+      when '-h', '--help' then print_help
+      else @spec_file = argument
+      end
+    end
+    set_type
+    set_working_dir
+  end
+
+  def print_help
+    puts <<-HELP
+Usage: bgrubyspec [OPTIONS] [SPECFILE]
+
+  Options:
+    -h, --help    Display this help page.
+HELP
+    exit
+  end
+
+  def run
+    res = system(command)
+    @output = collect_output
+    @result = parse_result 
+    notify(res)
+    exit
+  end
+
+private
+
+  def command
+    case @spec_type
+    when 'spec'
+      "rake spec SPEC='#{@spec_file}' SPEC_OPTS='-c --format specdoc --format specdoc:#{@results_file.path}'"
+    else
+      "rake test TEST='#{@spec_file}' 2>&1| tee #{@results_file.path}"
+    end
+  end
+
+  def notify(res)
+    system "growlnotify -n autotest --image #{image} -m \"#{@output.split("\n").last}\" #{title}"
+  end
+
+  def set_type
+    @spec_type = @spec_file =~ /\/spec\// ? 'spec' : 'test'
+  end
+
+  def set_working_dir
+    @working_dir = @spec_file.split("/#{@spec_type}/").first
+  end
+  
+  def image
+    File.join(File.dirname(__FILE__), 'img', "#{@result}.png")
+  end
+  
+  def collect_output
+    fh = File.new(@results_file.path)
+    fh.read
+  end
+  
+  def parse_result
+    if @output =~ /[1-9]\sfailures?/ || @output =~ /errors/
+      "red"
+    elsif @output =~ /pending/
+      "pending"
+    else
+      "green"
+    end
+  end
+
+  def title
+    res = ''
+    res << case @result
+    when 'red'; "Fail: "
+    when 'pending'; "Pending: "
+    else; "Pass: "
+    end
+    res << File.basename(@spec_file)
+  end
+
+end
+
+BgRubySpec.new($*).run
+

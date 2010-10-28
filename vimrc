@@ -33,6 +33,9 @@ map <leader>f :FufFile<CR>
 map <leader>r :FufMruFile<CR>
 map <leader>n :NERDTree<CR>
 
+" Run spec/test for the current ruby spec/test file
+map <leader>r :call BgRunSpec()<cr>
+
 " Strip all trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
@@ -64,17 +67,4 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-
-" Run Rspec for the current spec file
-" Experimental
-function! RunRspec()
-ruby << EOF
-  buffer = VIM::Buffer.current
-  spec_file = VIM::Buffer.current.name
-  command = "rake spec --format=html SPEC=#{spec_file} &"
-  print "Running Rspec for #{spec_file} in the terminal"
-  system(command)
-EOF
-endfunction
-map <leader>r :call RunRspec()<cr>
 

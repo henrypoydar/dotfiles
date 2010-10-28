@@ -3,10 +3,10 @@
 " On Ubuntu:
 "   sudo apt-get install ack-grep
 "   ln -s /usr/bin/ack-grep /usr/bin/ack
-" With MacPorts:
-"   sudo port install p5-app-ack
+" On Mac OSX with brew
+"   brew install ack
 
-let g:ackprg="ack\\ -H\\ --nocolor\\ --nogroup"
+let g:ackprg="ack\\ -H\\ --nocolor\\ --nogroup "
 
 function! Ack(args)
     let grepprg_bak=&grepprg
