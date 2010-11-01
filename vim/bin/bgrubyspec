@@ -34,7 +34,7 @@ HELP
     @output = collect_output
     @result = parse_result 
     notify(res)
-    exit
+    exit!
   end
 
 private
