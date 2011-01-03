@@ -22,7 +22,7 @@ set whichwrap+=<,>,h,l             " Make backspace and cursor keys wrap accordi
 syntax on                          " Enable syntax highlighting
 
 " Save open file if focus is lost
-au FocusLost * :wa
+"au FocusLost * :wa
 
 " Leader bindings, comma is leader
 let mapleader = ","

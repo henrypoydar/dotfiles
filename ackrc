@@ -1,1 +1,7 @@
---type-add=ruby=.haml,.rake,.rsel,.sass,.scss,.feature
+--ignore-dir=cache
+--ignore-dir=gems
+--sort-files
+--type-add=css=.sass,.scss
+--type-add=features=.feature
+--type-add=javascript=.json
+--type-add=ruby=.gemspec,.haml,.rake,.rsel,.ru
