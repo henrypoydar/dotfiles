@@ -24,12 +24,6 @@ syntax on                          " Enable syntax highlighting
 " Save open file if focus is lost
 "au FocusLost * :wa
 
-" Folding settings
-set foldmethod=indent   " fold based on indent
-set foldnestmax=10      " deepest fold is 10 levels
-set nofoldenable        " dont fold by default
-set foldlevel=1         " first level only 
-
 " Leader bindings, comma is leader
 let mapleader = ","
 map <leader>a :Ack<space>
@@ -53,6 +47,18 @@ imap <C-l> <Space>=><Space>
 
 " Escape via jj
 inoremap jj <ESC>
+
+" Folding settings
+set foldmethod=syntax   " fold based on syntax (indent works too)
+set foldnestmax=2      " deepest fold is 10 levels
+set nofoldenable        " dont fold by default
+set foldlevel=1         " first level only
+
+" Toggle folds with spacebar
+nnoremap <space> za
+
+" Fold selected code with spacebar
+vnoremap <space> zf
 
 " NERDTree options
 let g:NERDTreeShowHidden = 1
