@@ -24,6 +24,12 @@ syntax on                          " Enable syntax highlighting
 " Save open file if focus is lost
 "au FocusLost * :wa
 
+" Folding settings
+set foldmethod=indent   " fold based on indent
+set foldnestmax=10      " deepest fold is 10 levels
+set nofoldenable        " dont fold by default
+set foldlevel=1         " first level only 
+
 " Leader bindings, comma is leader
 let mapleader = ","
 map <leader>a :Ack<space>
