@@ -1,3 +1,5 @@
+console.log('~/.js/wiki.roving.com.js');
+
 $(document).ready(function() {  
 
   $(document).bind('keyup', function(event) {
