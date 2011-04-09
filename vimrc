@@ -1,4 +1,3 @@
-" Setup colors
 syntax enable
 set background=dark
 
