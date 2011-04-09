@@ -1,3 +1,7 @@
+" Setup colors
+syntax enable
+set background=dark
+
 set autoindent
 set backspace=indent,eol,start     " Behave, backspace
 set expandtab
