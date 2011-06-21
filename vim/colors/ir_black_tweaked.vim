@@ -67,11 +67,12 @@ let colors_name = "ir_black_tweaked"
 "hi Example         guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
 " General colors
-hi Normal           guifg=#f6f3e8     guibg=#1F1F1F       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-hi NonText          guifg=#292929     guibg=#1F1F1F       gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
+hi Normal           guifg=#f6f3e8     guibg=#1F1F1F     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
+hi NonText          guifg=#292929     guibg=#1F1F1F     gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
 
 hi Cursor           guifg=black       guibg=white       gui=NONE      ctermfg=black       ctermbg=white       cterm=reverse
-hi LineNr           guifg=#3D3D3D     guibg=#1F1F1F       gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
+hi LineNr           guifg=#3D3D3D     guibg=#1F1F1F     gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
+hi ColorColumn      guibg=#232323
 
 hi VertSplit        guifg=#202020     guibg=#202020     gui=NONE      ctermfg=darkgray    ctermbg=darkgray    cterm=NONE
 hi StatusLine       guifg=#CCCCCC     guibg=#202020     gui=italic    ctermfg=white       ctermbg=darkgray    cterm=NONE
