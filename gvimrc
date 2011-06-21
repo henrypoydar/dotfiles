@@ -14,3 +14,5 @@ colorscheme ir_black_tweaked
 set fuoptions=maxvert,maxhorz
 "au GUIEnter * set fullscreen
 
+" Set a right margin boundary
+set colorcolumn=80
