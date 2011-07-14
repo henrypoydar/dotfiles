@@ -63,7 +63,6 @@ endif
 
 let colors_name = "ir_black_tweaked"
 
-
 "hi Example         guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
 " General colors
