@@ -49,9 +49,9 @@ Host feature.dropbox.bantamlive.com
 
 # -- Constant Contact
 
-Host ctct-ct
-  Hostname     192.168.65.71
-  User         vagrant
+Host ctct-contacts-ci
+  Hostname     contacts-ci.roving.com
+  User         ci
 
 # -- Speedboat
 
