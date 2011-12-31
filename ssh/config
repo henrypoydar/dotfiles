@@ -47,6 +47,12 @@ Host feature.dropbox.bantamlive.com
   User         root
   IdentityFile ~/.ec2/bantam-keypair-01.pem
 
+# -- Constant Contact
+
+Host ctct-contacts-ci
+  Hostname     contacts-ci.roving.com
+  User         ci
+
 # -- Speedboat
 
 Host sp-backyard
