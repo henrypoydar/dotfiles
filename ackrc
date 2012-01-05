@@ -8,7 +8,9 @@ features=.feature
 --type-set
 javascript=.json,.js
 --type-set
-ruby=.gemspec,.haml,.rake,.rsel,.ru
+ruby=.rb,.gemspec,.haml,.rake,.rsel,.ru
 --type-set
 coffeescript=.coffee
+--type-set
+markdown=.md,.mdown,.markdown
 
