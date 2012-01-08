@@ -1,5 +1,6 @@
 syntax enable
 set background=dark
+colorscheme solarized
 
 set autoindent
 set backspace=indent,eol,start     " Behave, backspace
