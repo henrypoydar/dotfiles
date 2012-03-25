@@ -25,8 +25,8 @@
   changed = yellow
   untracked = cyan
 [core]
-  excludesfile = <%= ENV['HOME'] %>/.gitignore
-  editor = mvim
+  excludesfile = ~/.gitignore
+  editor = vim
   autocrlf = input
 [format]
   pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
