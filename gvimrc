@@ -1,7 +1,7 @@
 set lines=50
 set columns=136
 set linespace=3
-set gfn=Menlo\ Regular:h18
+set gfn=Menlo\ Regular:h20
 set guioptions=egmrt
 set guioptions-=r " Don't show right scrollbar
 set showtabline=2
