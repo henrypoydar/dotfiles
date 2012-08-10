@@ -1,0 +1,1 @@
+echo `ruby -v` | cut -d\  -f2

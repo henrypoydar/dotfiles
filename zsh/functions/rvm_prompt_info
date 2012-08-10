@@ -1,7 +1,0 @@
-if [[ -x $GEM_HOME ]]
-then echo $GEM_HOME | cut -d/ -f6 
-fi
-return
-if [[ -x $MY_RUBY_HOME ]]
-then echo $MY_RUBY_HOME | cut -d/ -f6 
-fi
