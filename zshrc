@@ -6,3 +6,4 @@
 #. ~/.zsh/greeting
 #. ~/.zsh/terminal
 . ~/.zsh/sources
+. ~/.zsh/rbenv
