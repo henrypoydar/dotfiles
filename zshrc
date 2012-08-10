@@ -6,6 +6,3 @@
 #. ~/.zsh/greeting
 #. ~/.zsh/terminal
 . ~/.zsh/sources
-
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  
