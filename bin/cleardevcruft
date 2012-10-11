@@ -1,5 +1,0 @@
-#!/bin/sh
-
-find . -name ".swo" -exec rm -rf {} \;
-find . -name ".swp" -exec rm -rf {} \;
-find . -name ".orig" -exec rm -rf {} \;
