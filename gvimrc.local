@@ -1,0 +1,8 @@
+set linespace=3
+set gfn=Menlo\ Regular:h20
+set guioptions-=r " Don't show right scrollbar
+
+"colorscheme solarized
+colorscheme ir_black_tweaked
+
+set colorcolumn=80
