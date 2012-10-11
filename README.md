@@ -11,9 +11,11 @@ and devjj's vim-config effort.
     cd ~/dotfiles
     rake install
 
-## Notes
+## Vim
 
-MacVim versions later than snapshot 51 seems to break NERDTree fuzzy finder
+Currently using the http://vim.spf13.com/ distribution,
+so this repo contains customizations to that for Vim, and assumes
+it's installed.
 
 ## Privacy
 
