@@ -1,4 +1,15 @@
-set list                           " Handle invisible characters
+" Handle invisible characters 
+set list
 set listchars=tab:▸\ ,eol:¬
+
+" Cursor ignores line artifacts
 set virtualedit=all
+
+" Tabs
+set expandtab
 set tabstop=2
+set smarttab
+set shiftwidth=2
+
+" Hashrocket mapping
+imap <C-l> <Space>=><Space>
