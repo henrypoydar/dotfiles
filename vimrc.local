@@ -1,0 +1,4 @@
+set list                           " Handle invisible characters
+set listchars=tab:▸\ ,eol:¬
+set virtualedit=all
+set tabstop=2
