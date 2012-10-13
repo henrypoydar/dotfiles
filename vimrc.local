@@ -13,3 +13,6 @@ set shiftwidth=2
 
 " Hashrocket mapping
 imap <C-l> <Space>=><Space>
+
+" Disable current line is always 0
+let g:numbers=1
