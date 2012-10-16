@@ -14,3 +14,6 @@ set shiftwidth=2
 " Hashrocket mapping
 imap <C-l> <Space>=><Space>
 
+" Try to make things faster
+set nocursorline
+set nocursorcolumn
