@@ -7,3 +7,23 @@ set colorcolumn=80
 
 " Custom colors
 source ~/.vim.local/colors/ir_black_tweaked.vim
+
+if has("gui_macvim")
+  macmenu &File.New\ Tab key=<nop>
+  map <D-t> :CtrlP<CR>
+  "let g:ctrlp_cmd = 'CommandT'
+  "if janus#is_plugin_enabled('ctrlp') && has("gui_macvim")
+  "macmenu &File.New\ Tab key=<D-S-t>
+endif
+
+
+"if has("gui_macvim") && has("gui_running")
+
+  "map <D-t> :CtrlP<CR>
+    
+  "map <D-/> <leader>c<<CR>
+  "call janus#add_mapping('nerdcommenter', 'imap', '<D-/>', '<Esc><plug>NERDCommenterToggle<CR>i')
+"else
+  "call janus#add_mapping('nerdcommenter', 'map', '<leader>/', '<plug>NERDCommenterToggle<CR>')
+  "call janus#add_mapping('nerdcommenter', 'imap', '<leader>/', '<Esc><plug>NERDCommenterToggle<CR>i')
+"endif
