@@ -3,7 +3,7 @@ set gfn=Menlo\ Regular:h20
 set guioptions-=r " Hide right scrollbar
 set guioptions-=L " Hide left scrollbar
 
-"colorscheme solarized
-colorscheme ir_black_tweaked
-
 set colorcolumn=80
+
+" Custom colors
+source ~/.vim.local/colors/ir_black_tweaked.vim
