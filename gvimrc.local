@@ -14,6 +14,6 @@ if has("gui_macvim")
 endif
 
 " Run ruby scripts in the terminal
-"source ~/.vim.local/tools/run_file_in_terminal.vim
+source ~/.vim.local/tools/run_file_in_terminal.vim
 "map <D-r> :let g:vim_terminal="/dev/ttys000"
 
