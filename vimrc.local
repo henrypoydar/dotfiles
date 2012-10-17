@@ -14,4 +14,3 @@ set shiftwidth=2
 " Hashrocket mapping
 imap <C-l> <Space>=><Space>
 
-
