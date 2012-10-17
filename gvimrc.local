@@ -1,4 +1,4 @@
-set linespace=3
+set linespace=5
 set gfn=Menlo\ Regular:h20
 set guioptions-=r " Hide right scrollbar
 set guioptions-=L " Hide left scrollbar
@@ -8,22 +8,12 @@ set colorcolumn=80
 " Custom colors
 source ~/.vim.local/colors/ir_black_tweaked.vim
 
+" Map commenting
 if has("gui_macvim")
-  macmenu &File.New\ Tab key=<nop>
-  map <D-t> :CtrlP<CR>
-  "let g:ctrlp_cmd = 'CommandT'
-  "if janus#is_plugin_enabled('ctrlp') && has("gui_macvim")
-  "macmenu &File.New\ Tab key=<D-S-t>
+  map <D-/> <Plug>NERDCommenterToggle<CR>
 endif
 
+" Run ruby scripts in the terminal
+"source ~/.vim.local/tools/run_file_in_terminal.vim
+"map <D-r> :let g:vim_terminal="/dev/ttys000"
 
-"if has("gui_macvim") && has("gui_running")
-
-  "map <D-t> :CtrlP<CR>
-    
-  "map <D-/> <leader>c<<CR>
-  "call janus#add_mapping('nerdcommenter', 'imap', '<D-/>', '<Esc><plug>NERDCommenterToggle<CR>i')
-"else
-  "call janus#add_mapping('nerdcommenter', 'map', '<leader>/', '<plug>NERDCommenterToggle<CR>')
-  "call janus#add_mapping('nerdcommenter', 'imap', '<leader>/', '<Esc><plug>NERDCommenterToggle<CR>i')
-"endif
