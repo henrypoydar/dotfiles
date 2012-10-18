@@ -1,6 +1,3 @@
-" TODO: figure out how to cd to root
-" Map to command R
-
 function! RunInTerminal(file)
   if match(a:file, '_spec\.rb') != -1
     let l:command = 'bundle exec rspec'
@@ -10,11 +7,12 @@ function! RunInTerminal(file)
 
   if exists("l:command")
     let l:run_script = "!osascript ~/.vim.local/tools/run_command.applescript" 
+    let l:run_dir = getcwd()
     silent execute ":up"
-    silent execute l:run_script . " '" . l:command . " " . a:file . "' 'Ruby Tests'"
+    silent execute l:run_script . " 'cd " . l:run_dir . " && " . l:command . " " . a:file . "' 'Ruby Tests'"
     silent execute ":redraw!"
   else
-    echo "This file does not appear to be a ruby file " . a:file 
+    echo "This file does not appear to be a ruby file "
   end
 endfunction
 
