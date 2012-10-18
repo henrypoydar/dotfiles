@@ -7,3 +7,4 @@
 #. ~/.zsh/terminal
 . ~/.zsh/sources
 . ~/.zsh/rbenv
+. ~/.zsh/jruby_opts
