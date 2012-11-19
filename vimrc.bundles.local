@@ -27,7 +27,7 @@ Bundle 'corntrace/bufexplorer'
 "Bundle 'nathanaelkane/vim-indent-guides'
 
 " General Programming
-Bundle 'scrooloose/syntastic'
+"Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
