@@ -17,6 +17,15 @@ Currently using the http://vim.spf13.com/ distribution,
 so this repo contains customizations to that for Vim, and assumes
 it's installed.
 
+### Installing/updating bundles
+
+The spf13 distribution uses vundle for bundle customization. Changes should
+be made in `vimrc.bundles.local`. Afterwards, you'll have to cleanup the 
+local installation of the bundles with a combination of:
+
+    vim +BundleClean +q
+    vim +BundleInstall! +q
+
 ## Privacy
 
 There is some sensitive stuff in this repo, necessitated by convenience. Keep it private.
