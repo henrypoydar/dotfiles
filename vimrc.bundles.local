@@ -38,7 +38,7 @@ if executable('ctags')
 endif
 
 Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neocomplcache-snippets-complete'
+Bundle 'Shougo/neosnippet'
 Bundle 'honza/snipmate-snippets'
 
 " PHP
@@ -55,6 +55,7 @@ Bundle 'leshill/vim-json'
 Bundle 'groenewege/vim-less'
 Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
+Bundle 'kchmck/vim-coffee-script'
 
 " Java
 "Bundle 'derekwyatt/vim-scala'
@@ -80,7 +81,6 @@ Bundle 'Puppet-Syntax-Highlighting'
 "Bundle 'beyondwords/vim-twig'
 
 " Custom
-Bundle 'shemerey/vim-peepopen'
-Bundle ''
+"Bundle 'shemerey/vim-peepopen'
 
 
