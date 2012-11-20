@@ -81,6 +81,6 @@ Bundle 'Puppet-Syntax-Highlighting'
 "Bundle 'beyondwords/vim-twig'
 
 " Custom
-"Bundle 'shemerey/vim-peepopen'
+Bundle 'shemerey/vim-peepopen'
 
 
