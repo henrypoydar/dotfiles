@@ -1,1 +1,1 @@
-echo `ruby -v` | cut -d\  -f2
+rbenv version | awk '{print $1}'
