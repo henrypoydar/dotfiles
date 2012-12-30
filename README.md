@@ -1,12 +1,14 @@
-# Henry Poydar Dot Files
+# My Dot Files
 
 These are config files to set up a system the way I like it.
 
-Forked from Ryan Bates, with pastes from Robby Russel's oh-my-zsh effort,
-and devjj's vim-config effort.
+Originally forked from @ryanb, with pastes from @robbyrussell's 
+oh-my-zsh effort, @devjj's vim-config, @holman and open sourced dotfiles from 
+various other nerds.
 
 ## Installation
 
+    cd ~
     git clone git://github.com/hpoydar/dotfiles ~/dotfiles
     cd ~/dotfiles
     rake install
@@ -26,6 +28,8 @@ local installation of the bundles with a combination of:
     vim +BundleClean +q
     vim +BundleInstall! +q
 
-## Privacy
+## TODO
 
-There is some sensitive stuff in this repo, necessitated by convenience. Keep it private.
+* OSX / Mountain Lion setup script
+* Sublime setup (maybe - still back with Vim now)
+* None of the bash stuff is verified (I'm on zsh)

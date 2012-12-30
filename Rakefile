@@ -5,7 +5,7 @@ desc "install the dot files into user's home directory"
 task :install do
   replace_all = false
   Dir['*'].each do |file|
-    next if %w[Rakefile README.rdoc LICENSE ssh].include? file
+    next if %w[Rakefile README.md LICENSE].include? file
     
     if File.exist?(File.join(ENV['HOME'], ".#{file.sub('.erb', '')}"))
       if File.identical? file, File.join(ENV['HOME'], ".#{file.sub('.erb', '')}")
@@ -30,15 +30,6 @@ task :install do
       link_file(file)
     end
   end
-  
-  # Hard copy ssh/config so we don't disturb the other ssh files
-  if File.exist?(File.join(ENV['HOME'], ".ssh/config"))
-    puts "overwriting ~/.ssh/config"
-    system %Q{rm -rf "$HOME/.ssh/config"}
-  else
-    puts "copying ~/.ssh/config"
-  end
-  system %Q{cp ssh/config ~/.ssh/.}
   
 end
 
