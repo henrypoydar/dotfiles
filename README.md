@@ -1,6 +1,6 @@
-# My Dot Files
+# Dotfiles
 
-These are config files to set up a system the way I like it.
+Sets up my OSX configuration preferences for zsh, vim, and other dot-able stuff.
 
 Originally forked from @ryanb, with pastes from @robbyrussell's 
 oh-my-zsh effort, @devjj's vim-config, @holman and open sourced dotfiles from 
