@@ -8,7 +8,6 @@ various other nerds.
 
 ## Installation
 
-    cd ~
     git clone git://github.com/hpoydar/dotfiles ~/dotfiles
     cd ~/dotfiles
     rake install
