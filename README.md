@@ -33,3 +33,4 @@ local installation of the bundles with a combination of:
 * OSX / Mountain Lion setup script
 * Sublime setup (maybe - still back with Vim now)
 * None of the bash stuff is verified (I'm on zsh)
+* On install pull in a private repo of ssh aliases into ssh/config
