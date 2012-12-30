@@ -1,9 +1,9 @@
 autoload colors; colors;
 
-ZSH_GIT_PROMPT_DIRTY="✚"              # Text to display if the branch is dirty
+ZSH_GIT_PROMPT_DIRTY="▴"              # Text to display if the branch is dirty
 ZSH_GIT_PROMPT_CLEAN=""               # Text to display if the branch is clean
 
-local return_code="%(?,%{$fg[gray]%}›%{$reset_color%},%{$fg[red]%}›%{$reset_color%})"
+local return_code="%(?,%{$fg[gray]%}▸%{$reset_color%},%{$fg[red]%}▸%{$reset_color%})"
  
 PROMPT='${return_code} %{$fg[white]%}%.%{$reset_color%} $(git_prompt_info)%{$reset_color%}%B$%b '
  
