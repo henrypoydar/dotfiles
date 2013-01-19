@@ -2,7 +2,7 @@ require 'rake'
 require 'erb'
 
 desc "Install dot files and dependencies"
-task :install => [:intro, :brew_packages, :zsh, :outro]
+task :install => [:intro, :brew_packages, :zsh, :misc, :outro]
 
 task :intro do
   puts ""
@@ -38,9 +38,15 @@ task :brew_packages do
 
 end
 
-task :zsh do 
+task :zsh do
   msg "Installing zsh files"
   install_dotfiles('zsh*')
+end
+
+task :misc do
+  %w(ackrc gemrc gitconfig.erb).each do |f|
+    msg "Installing #{f}"
+  end
 end
 
 def msg(m)
