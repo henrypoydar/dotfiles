@@ -4,8 +4,8 @@ Sets up my OSX configuration preferences and dependencies for zsh, vim,
 and other dot-configured packages.
 
 Originally forked from @ryanb, with pastes from @robbyrussell's 
-oh-my-zsh effort, @devjj's vim-config, @holman, @skwp and open sourced 
-dotfiles from various other nerds.
+oh-my-zsh effort, @devjj's vim-config, @holman, @skwp's YADR and open 
+sourced dotfiles from various other nerds.
 
 ## Installation
 
@@ -30,6 +30,8 @@ local installation of the bundles with a combination of:
 
 ## TODO
 
+* Prompt to include unsaved files
+* Need commented stuff in zsh/config?
 * OSX / Mountain Lion setup script
 * Sublime setup (maybe - still back with Vim now)
 * None of the bash stuff is verified (I'm on zsh)

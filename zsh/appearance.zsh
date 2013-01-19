@@ -1,4 +1,21 @@
-autoload colors; colors;
+autoload colors
+
+function git_prompt_info() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo "$ZSH_GIT_PROMPT_PREFIX${ref#refs/heads/}$(parse_git_dirty)$ZSH_GIT_PROMPT_SUFFIX"
+}
+
+function ruby_prompt_info() {
+  rbenv version | awk '{print $1}'
+}
+
+function parse_git_dirty() {
+  if [[ $((git status 2> /dev/null) | tail -n1) != "nothing to commit (working directory clean)" ]]; then
+    echo "$ZSH_GIT_PROMPT_DIRTY"
+  else
+    echo "$ZSH_GIT_PROMPT_CLEAN"
+  fi
+}
 
 ZSH_GIT_PROMPT_DIRTY="▴"              # Text to display if the branch is dirty
 ZSH_GIT_PROMPT_CLEAN=""               # Text to display if the branch is clean

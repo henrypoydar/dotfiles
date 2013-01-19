@@ -1,6 +1,3 @@
-# tmux
-alias tmux="TERM=screen-256color-bce tmux"
-
 # cd
 alias ..='cd ..'
 
@@ -29,16 +26,7 @@ alias gcp='git cherry-pick'
 alias rake='noglob rake'
 
 # rails
-alias sc='script/console'
-alias ss='script/server'
-alias sg='script/generate'
-alias a='autotest -rails'
 alias tlog='tail -f log/development.log'
-alias scaffold='script/generate nifty_scaffold'
-alias migrate='rake db:migrate db:test:clone'
-alias rst='touch tmp/restart.txt'
-alias be='bundle exec'
-alias bx='bundle exec'
 
-# commands starting with % for pasting from web
-alias %=' '
+# bundler
+alias bx='bundle exec'
