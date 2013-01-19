@@ -31,7 +31,6 @@ local installation of the bundles with a combination of:
 ## TODO
 
 * Prompt to include unsaved files
-* Need commented stuff in zsh/config?
 * OSX / Mountain Lion setup script
 * Sublime setup (maybe - still back with Vim now)
 * None of the bash stuff is verified (I'm on zsh)
