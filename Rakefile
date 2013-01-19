@@ -39,7 +39,7 @@ task :brew_packages do
 end
 
 task :zsh do
-  msg "Installing zsh files"
+  msg "Installing zsh configuration"
   install_dotfiles('zsh*')
 end
 
@@ -48,6 +48,11 @@ task :misc do
     msg "Installing #{f}"
     install_dotfiles(f)
   end
+end
+
+task :vim do
+  msg "Installing vim configuration"
+  install_dotfiles('vim')
 end
 
 def msg(m)
