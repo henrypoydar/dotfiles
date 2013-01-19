@@ -15,7 +15,11 @@ task :brew_packages do
 
   %w(ack git ctags macvim zsh-completions).each do |pkg|
     puts "+++ Installing #{pkg}"
-    sh "brew install #{pkg}"
+    begin 
+      sh "brew install #{pkg}"
+    rescue => e
+      puts e.inspect
+    end
   end
 
 end
