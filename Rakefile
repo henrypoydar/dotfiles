@@ -2,7 +2,7 @@ require 'rake'
 require 'erb'
 
 desc "Install dot files and dependencies"
-task :install => [:intro, :brew_packages, :zsh, :misc, :outro]
+task :install => [:intro, :brew_packages, :zsh, :vim, :misc, :outro]
 
 task :intro do
   puts ""
