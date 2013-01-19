@@ -46,6 +46,7 @@ end
 task :misc do
   %w(ackrc gemrc gitconfig.erb).each do |f|
     msg "Installing #{f}"
+    install_dotfiles(f)
   end
 end
 
