@@ -2,26 +2,48 @@ require 'rake'
 require 'erb'
 
 desc "Install dot files and dependencies"
-task :install => [:brew_packages] do
+task :install => [:intro, :brew_packages, :outro]
 
+task :intro do
+  puts ""
+  puts "=============================="
+  puts "Beginning installation of dotfiles and dependencies"
 end
+
+task :outro do
+  puts ""
+  puts "Completed installation of dotfiles and dependencies"
+  puts "=============================="
+  puts ""
+end
+
 
 task :brew_packages do
 
+  msg "Installing homebrew packages" 
+
   if not File.exists? "/usr/local/bin/brew"
-    puts "+++ Installing homebrew"
+    msg "Installing homebrew"
     sh "ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
   end
 
+  msg "Update homebrew and formulae"
+  sh "brew update"
+
   %w(ack git ctags macvim zsh-completions).each do |pkg|
-    puts "+++ Installing #{pkg}"
-    begin 
+    msg "Installing #{pkg}"
+    begin
       sh "brew install #{pkg}"
     rescue => e
       puts e.inspect
     end
   end
 
+end
+
+def msg(m)
+  puts ""
+  puts "+++ #{m}"
 end
   # Install package dependencies 
   
