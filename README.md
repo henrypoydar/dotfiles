@@ -1,10 +1,11 @@
 # Dotfiles
 
-Sets up my OSX configuration preferences for zsh, vim, and other dot-able stuff.
+Sets up my OSX configuration preferences and dependencies for zsh, vim, 
+and other dot-configured packages.
 
 Originally forked from @ryanb, with pastes from @robbyrussell's 
-oh-my-zsh effort, @devjj's vim-config, @holman and open sourced dotfiles from 
-various other nerds.
+oh-my-zsh effort, @devjj's vim-config, @holman, @skwp and open sourced 
+dotfiles from various other nerds.
 
 ## Installation
 
