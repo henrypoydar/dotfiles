@@ -1,6 +1,3 @@
 .DS_Store
 .svn
-*~
-.*.swp
-.*.swo
-*.orig
+vim/bundle/*

@@ -53,6 +53,8 @@ end
 task :vim do
   msg "Installing vim configuration"
   install_dotfiles('vim')
+  sh "git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle"
+  install_dotfiles('vimrc')
 end
 
 def msg(m)
