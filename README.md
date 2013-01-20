@@ -13,25 +13,8 @@ sourced dotfiles from various other nerds.
     cd ~/dotfiles
     rake install
 
-## Vim
-
-Currently using the http://vim.spf13.com/ distribution,
-so this repo contains customizations to that for Vim, and assumes
-it's installed.
-
-### Installing/updating bundles
-
-The spf13 distribution uses vundle for bundle customization. Changes should
-be made in `vimrc.bundles.local`. Afterwards, you'll have to cleanup the 
-local installation of the bundles with a combination of:
-
-    vim +BundleClean +q
-    vim +BundleInstall! +q
-
 ## TODO
 
-* Prompt to include unsaved files
-* OSX / Mountain Lion setup script
-* Sublime setup (maybe - still back with Vim now)
-* None of the bash stuff is verified (I'm on zsh)
-* On install pull in a private repo of ssh aliases into ssh/config
+* Fix keymappings for CtrlP, tagbar
+* Restore rspec runner script
+* Add OSX / Mountain Lion setup script (see YADR)

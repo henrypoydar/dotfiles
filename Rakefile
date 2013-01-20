@@ -47,14 +47,17 @@ task :misc do
   %w(ackrc gemrc gitconfig.erb).each do |f|
     msg "Installing #{f}"
     install_dotfiles(f)
-  end
+  end 
 end
 
 task :vim do
   msg "Installing vim configuration"
   install_dotfiles('vim')
+  sh "rm -rf ~/.vim/bundle/vundle"
   sh "git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle"
   install_dotfiles('vimrc')
+  sh "vim +BundleClean +qall"
+  sh "vim +BundleInstall +qall"
 end
 
 def msg(m)

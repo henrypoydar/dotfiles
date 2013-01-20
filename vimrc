@@ -2,12 +2,67 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" =============== Vundle Initialization ===============
+" =============== Plugins ============================
+" Using Vundle plugin manager
 " See https://github.com/gmarik/vundle
 
-  filetype off
-  set rtp+=~/.vim/bundle/vundle/
-  call vundle#rc()
+filetype off " required!
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Set Vundle to manage bundles (required)
+Bundle 'gmarik/vundle'
+
+" Git functionality
+Bundle 'tpope/vim-fugitive'
+
+" File/directory view and utilities
+Bundle 'scrooloose/nerdtree'
+
+" Solarized color scheme
+Bundle 'altercation/vim-colors-solarized'
+
+" IR Dark Gray color scheme
+Bundle 'hpoydar/vim-colors-ir-dark-gray'
+
+" Powerline
+Bundle 'skwp/vim-powerline'
+
+" Surround
+Bundle 'tpope/vim-surround'
+
+" Fuzzy search
+Bundle 'kien/ctrlp.vim'
+
+" Commenting
+Bundle 'scrooloose/nerdcommenter'
+
+" Alignment
+Bundle 'godlygeek/tabular'
+
+" Tagbar
+if executable('ctags')
+    Bundle 'majutsushi/tagbar'
+endif
+
+" Code completion
+Bundle 'Shougo/neocomplcache'
+
+" Snippets
+Bundle 'honza/snipmate-snippets'
+
+" Javascript
+Bundle 'pangloss/vim-javascript'
+Bundle 'kchmck/vim-coffee-script'
+
+" Ruby
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+Bundle 'rodjek/vim-puppet'
+
+" Markdown
+Bundle 'tpope/vim-markdown'
 
 " ================ General Config ====================
 
@@ -19,14 +74,32 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
+set virtualedit=all             "Cursor moves up or down within a column
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
-"turn on syntax highlighting
+" Turn on syntax highlighting
 syntax on
+
+" ================ Appearance =======================
+
+set linespace=3
+set gfn=Menlo\ Regular:h20
+set guioptions-=r " Hide right scrollbar
+set guioptions-=L " Hide left scrollbar
+
+set background=dark
+colorscheme ir_dark_gray
+"colorscheme solarized
+
+set colorcolumn=80
+
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs
+let g:Powerline_symbols = 'fancy'
 
 " ================ Search Settings  =================
 
@@ -44,9 +117,9 @@ set nowb
 " Keep undo history across sessions, by storing in file.
 " Only works all the time.
 
-" silent !mkdir ~/.vim/backups > /dev/null 2>&1
-" set undodir=~/.vim/backups
-" set undofile
+silent !mkdir ~/.vim/backups > /dev/null 2>&1
+set undodir=~/.vim/backups
+set undofile
 
 " ================ Indentation ======================
 
@@ -95,3 +168,10 @@ set wildignore+=*.png,*.jpg,*.gif
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
+
+
+" ================ Mapping ==========================
+
+let mapleader = ","
+map <leader>nt :NERDTreeToggle<CR>
+
