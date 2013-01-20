@@ -1,6 +1,3 @@
 .DS_Store
-.svn
-*~
-.*.swp
-vim/bundle
+vim/bundle/*
 gitconfig
