@@ -13,3 +13,7 @@ sourced dotfiles from various other nerds.
     cd ~/dotfiles
     rake install
 
+## TODO
+
+* Pryify everything
+
