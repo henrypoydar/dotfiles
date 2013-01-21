@@ -52,7 +52,10 @@ endif
 Bundle 'Shougo/neocomplcache'
 
 " Snippets
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
 Bundle 'honza/snipmate-snippets'
+Bundle 'garbas/vim-snipmate'
 
 " Javascript
 Bundle 'pangloss/vim-javascript'
@@ -178,6 +181,10 @@ set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
+" ================ Sourcing =========================
+
+source ~/.vim/tools/run_in_terminal.vim
+
 " ================ Mapping ==========================
 
 let mapleader = ","
@@ -199,3 +206,5 @@ nnoremap <silent> <leader>c :TagbarToggle<cr>
 " cmd+/ to toggle comments
 map <D-/> <Plug>NERDCommenterToggle<cr>
 
+" cmd+R to run Ruby in terminal window
+map <D-r> :RunRubyFileInTerminal<cr>
