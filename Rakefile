@@ -2,7 +2,7 @@ require 'rake'
 require 'erb'
 
 desc "Install dot files and dependencies"
-task :install => [:intro, :brew_packages, :zsh, :fonts, :misc, :vim, :outro]
+task :install => [:intro, :osx, :brew_packages, :zsh, :fonts, :misc, :vim, :outro]
 
 task :intro do
   puts ""
@@ -15,6 +15,11 @@ task :outro do
   puts "Completed installation of dotfiles and dependencies"
   puts "=============================="
   puts ""
+end
+
+task :osx do
+  msg "Setting up sane defaults for the OSX environment"
+  sh "./osx"
 end
 
 task :fonts do

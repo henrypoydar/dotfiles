@@ -97,8 +97,6 @@ colorscheme solarized
 
 if has('gui_running')
   set guioptions-=T   " Remove the toolbar
-  "set gfn=Menlo\ Regular:h20
-  "set gfn=Inconsolata-dz\ for\ Powerline:h20
   set gfn=Menlo\ for\ Powerline:h20
   set guioptions-=r " Hide right scrollbar
   set guioptions-=L " Hide left scrollbar
@@ -111,6 +109,7 @@ endif
 set colorcolumn=80 " Faint line will appear to mark 80 columns
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
+let g:Powerline_symbols='Fancy'
 
 " ================ Search Settings  =================
 
