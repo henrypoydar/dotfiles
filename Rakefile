@@ -24,7 +24,7 @@ end
 
 task :fonts do
   msg "Consider changing your terminal font to 'Menlo for Powerline'"
-  sh "cp fonts/Menlo-Powerline.otf ~/Library/Fonts"
+  sh "cp fonts/*.otf ~/Library/Fonts/."
 end
 
 task :brew_packages do
