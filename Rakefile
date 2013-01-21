@@ -2,7 +2,7 @@ require 'rake'
 require 'erb'
 
 desc "Install dot files and dependencies"
-task :install => [:intro, :brew_packages, :zsh, :vim, :misc, :outro]
+task :install => [:intro, :brew_packages, :zsh, :fonts, :misc, :vim, :outro]
 
 task :intro do
   puts ""
@@ -15,6 +15,11 @@ task :outro do
   puts "Completed installation of dotfiles and dependencies"
   puts "=============================="
   puts ""
+end
+
+task :fonts do
+  msg "Consider changing your terminal font to 'Menlo for Powerline'"
+  sh "cp fonts/Menlo-Powerline.otf ~/Library/Fonts"
 end
 
 task :brew_packages do
