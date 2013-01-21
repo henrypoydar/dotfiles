@@ -15,7 +15,6 @@ sourced dotfiles from various other nerds.
 
 ## TODO
 
-* Get IR Dark Gray working in terminal too (like in spf13)
 * Fix keymappings for CtrlP, tagbar
 * Restore rspec runner script
 * Add OSX / Mountain Lion setup script (see YADR)

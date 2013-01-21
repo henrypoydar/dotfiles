@@ -1,6 +1,6 @@
-. ~/.zsh/config.zsh
-. ~/.zsh/bindings.zsh
 . ~/.zsh/aliases.zsh
+. ~/.zsh/bindings.zsh
+. ~/.zsh/config.zsh
 . ~/.zsh/colors.zsh
 . ~/.zsh/completions.zsh
 . ~/.zsh/fasd.zsh

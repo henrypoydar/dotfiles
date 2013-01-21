@@ -37,12 +37,15 @@ Bundle 'kien/ctrlp.vim'
 " Commenting
 Bundle 'scrooloose/nerdcommenter'
 
+" Check syntax before exiting
+Bundle 'scrooloose/syntastic'
+
 " Alignment
 Bundle 'godlygeek/tabular'
 
 " Tagbar
 if executable('ctags')
-    Bundle 'majutsushi/tagbar'
+  Bundle 'majutsushi/tagbar'
 endif
 
 " Code completion
@@ -84,19 +87,26 @@ set hidden
 " Turn on syntax highlighting
 syntax on
 
+" Enable neocomplcache
+let g:neocomplcache_enable_at_startup=1
+
 " ================ Appearance =======================
-
-set linespace=3
-set gfn=Menlo\ Regular:h20
-set guioptions-=r " Hide right scrollbar
-set guioptions-=L " Hide left scrollbar
-
+set linespace=4
 set background=dark
-colorscheme ir_dark_gray
-"colorscheme solarized
+colorscheme solarized
 
-set colorcolumn=80
+if has('gui_running')
+  set guioptions-=T   " Remove the toolbar
+  set gfn=Menlo\ Regular:h20
+  set guioptions-=r " Hide right scrollbar
+  set guioptions-=L " Hide left scrollbar
+  if has('gui_macvim')
+    set transparency=5  " Make the window slightly transparent
+    colorscheme ir_dark_gray " Use macvim optimized color scheme
+  endif
+endif
 
+set colorcolumn=80 " Faint line will appear to mark 80 columns
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 let g:Powerline_symbols = 'fancy'
@@ -161,17 +171,30 @@ set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
-"
-
 " ================ Scrolling ========================
 
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
-
 " ================ Mapping ==========================
 
 let mapleader = ","
-map <leader>nt :NERDTreeToggle<CR>
+
+" ,n to toggle NERDTree
+map <leader>n :NERDTreeToggle<cr>
+
+" ,b to go to the next buffer
+map <leader>b :bn<cr>
+
+" ,t to toggle fuzzy finder
+nnoremap <silent> <leader>t :CtrlP<cr>
+" ,T to toggle fuzzy finder and clear the cache first
+nnoremap <silent> <leader>T :ClearCtrlPCache<cr>\|:CtrlP<cr>
+
+" ,c to toggle Tagbar
+nnoremap <silent> <leader>c :TagbarToggle<cr>
+
+" cmd+/ to toggle comments
+map <D-/> <Plug>NERDCommenterToggle<cr>
 
