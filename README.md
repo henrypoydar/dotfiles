@@ -13,8 +13,3 @@ sourced dotfiles from various other nerds.
     cd ~/dotfiles
     rake install
 
-## TODO
-
-* Fix keymappings for CtrlP, tagbar
-* Restore rspec runner script
-* Add OSX / Mountain Lion setup script (see YADR)
