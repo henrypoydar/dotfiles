@@ -105,7 +105,7 @@ if has('gui_running')
   set guioptions-=r " Hide right scrollbar
   set guioptions-=L " Hide left scrollbar
   if has('gui_macvim')
-    set transparency=5  " Make the window slightly transparent
+    set transparency=0  " Make window completely opaque 
     colorscheme ir_dark_gray " Use macvim optimized color scheme
   endif
 endif
