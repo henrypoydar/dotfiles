@@ -29,4 +29,5 @@ Then login again. `which zsh` should read `/usr/local/bin/zsh`
 ## TODO
 
 * Pryify everything
+* Vim in the command line (and db consoles, etc)
 
