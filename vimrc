@@ -208,3 +208,5 @@ map <D-/> <Plug>NERDCommenterToggle<cr>
 
 " cmd+R to run Ruby in terminal window
 map <D-r> :RunRubyFileInTerminal<cr>
+
+map <leader>m :silent !open % -a /Applications/Marked.app<cr>:redraw!<cr>
