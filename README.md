@@ -26,7 +26,3 @@ Then login again. `which zsh` should read `/usr/local/bin/zsh`
     cd ~/dotfiles
     rake install
 
-## TODO
-
-* Pryify everything
-

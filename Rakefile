@@ -54,10 +54,10 @@ task :zsh do
 end
 
 task :misc do
-  %w(ackrc editrc inputrc gemrc gitconfig.erb).each do |f|
+  %w(ackrc aprc editrc inputrc irbrc gemrc gitconfig.erb pryrc).each do |f|
     msg "Installing #{f}"
     install_dotfiles(f)
-  end 
+  end
 end
 
 task :vim do
