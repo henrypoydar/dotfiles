@@ -6,3 +6,4 @@
 . ~/.zsh/fasd.zsh
 . ~/.zsh/prompt.zsh
 . ~/.zsh/rbenv.zsh
+. ~/.zsh/vimify.zsh

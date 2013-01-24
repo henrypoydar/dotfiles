@@ -54,7 +54,7 @@ task :zsh do
 end
 
 task :misc do
-  %w(ackrc gemrc gitconfig.erb).each do |f|
+  %w(ackrc editrc inputrc gemrc gitconfig.erb).each do |f|
     msg "Installing #{f}"
     install_dotfiles(f)
   end 
