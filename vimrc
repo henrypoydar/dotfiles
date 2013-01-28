@@ -94,7 +94,7 @@ syntax on
 let g:neocomplcache_enable_at_startup=1
 
 " ================ Appearance =======================
-set linespace=4
+set linespace=6
 set background=dark
 colorscheme solarized
 
@@ -185,6 +185,29 @@ set sidescroll=1
 
 source ~/.vim/tools/run_in_terminal.vim
 
+" ================ Writing mode =====================
+
+let g:writer_on = 0
+function! WritingModeToggle()
+  if (g:writer_on == 0)
+    set formatoptions=1
+    set linebreak
+    set wrap
+    set nolist
+    set breakat=\ |@-+;:,./?^I
+    nnoremap j gj
+    nnoremap k gk
+    vnoremap j gj
+    vnoremap k gk
+    let g:writer_on = 1
+  else
+    let g:writer_on = 0
+    set list
+    set breakat=\ ^I!@*-+;:,./?
+    set nowrap
+  endif
+endfunction
+
 " ================ Mapping ==========================
 
 let mapleader = ","
@@ -208,3 +231,6 @@ map <D-/> <Plug>NERDCommenterToggle<cr>
 
 " cmd+R to run Ruby in terminal window
 map <D-r> :RunRubyFileInTerminal<cr>
+
+" Toggle writing mode
+map <leader>w :call WritingModeToggle()<cr>
