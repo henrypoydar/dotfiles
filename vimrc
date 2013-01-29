@@ -96,7 +96,7 @@ let g:neocomplcache_enable_at_startup=1
 " ================ Appearance =======================
 set linespace=6
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 
 if has('gui_running')
   set guioptions-=T   " Remove the toolbar
@@ -212,6 +212,18 @@ function! WritingModeToggle()
   endif
 endfunction
 
+" ================ Diagnostic =======================
+
+" Show syntax highlighting groups for word under cursor
+" Mimics ctrl-shift-p behavior found in Textmate
+nmap <C-S-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
 " ================ Mapping ==========================
 
 let mapleader = ","
@@ -244,3 +256,5 @@ map <leader>w :call WritingModeToggle()<cr>
 
 " Open markdown app in Marked
 map <leader>m :silent !open "%" -a /Applications/Marked.app<cr>:redraw!<cr>
+
+
