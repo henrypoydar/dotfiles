@@ -68,7 +68,7 @@ Bundle 'tpope/vim-rake'
 Bundle 'rodjek/vim-puppet'
 
 " Markdown
-Bundle 'tpope/vim-markdown'
+Bundle 'plasticboy/vim-markdown'
 
 " ================ General Config ====================
 
@@ -117,9 +117,11 @@ let g:Powerline_symbols='Fancy'
 
 " ================ Search Settings  =================
 
-set incsearch        "Find the next match as we type the search
-set hlsearch         "Hilight searches by default
-set viminfo='100,f1  "Save up to 100 marks, enable capital marks
+set incsearch        " Find the next match as we type the search
+set hlsearch         " Hilight searches by default
+set viminfo='100,f1  " Save up to 100 marks, enable capital marks
+set ic               " Ignore case
+set scs              " Don't ignore case if a capital letter is added
 
 " ================ Turn Off Swap Files ==============
 
@@ -213,6 +215,9 @@ endfunction
 " ================ Mapping ==========================
 
 let mapleader = ","
+
+" Hashrocket to ctrl L
+imap <C-l> <Space>=><Space>"
 
 " ,n to toggle NERDTree
 map <leader>n :NERDTreeToggle<cr>
