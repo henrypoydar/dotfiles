@@ -194,6 +194,7 @@ function! WritingModeToggle()
     set linebreak
     set wrap
     set nolist
+    setlocal spell spelllang=en_us
     set breakat=\ |@-+;:,./?^I
     nnoremap j gj
     nnoremap k gk
@@ -203,6 +204,7 @@ function! WritingModeToggle()
   else
     let g:writer_on = 0
     set list
+    set nospell
     set breakat=\ ^I!@*-+;:,./?
     set nowrap
   endif
@@ -234,3 +236,7 @@ map <D-r> :RunRubyFileInTerminal<cr>
 
 " Toggle writing mode
 map <leader>w :call WritingModeToggle()<cr>
+
+" Open markdown app in Marked
+"map <leader>m :silent !open % -a /Applications/Marked.app<cr>:redraw!<cr>
+map <leader>m :silent !open "%" -a /Applications/Marked.app<cr>:redraw!<cr>
