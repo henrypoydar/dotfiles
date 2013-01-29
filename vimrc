@@ -101,7 +101,7 @@ colorscheme solarized
 if has('gui_running')
   set guioptions-=T   " Remove the toolbar
   "set gfn=Menlo\ for\ Powerline:h20
-  set gfn=Inconsolata-dz\ for\ Powerline:h20
+  set gfn=Source\ Code\ Pro\ for\ Powerline:h20
   set guioptions-=r " Hide right scrollbar
   set guioptions-=L " Hide left scrollbar
   if has('gui_macvim')
@@ -238,5 +238,4 @@ map <D-r> :RunRubyFileInTerminal<cr>
 map <leader>w :call WritingModeToggle()<cr>
 
 " Open markdown app in Marked
-"map <leader>m :silent !open % -a /Applications/Marked.app<cr>:redraw!<cr>
 map <leader>m :silent !open "%" -a /Applications/Marked.app<cr>:redraw!<cr>
