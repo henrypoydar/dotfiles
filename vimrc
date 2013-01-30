@@ -96,7 +96,7 @@ let g:neocomplcache_enable_at_startup=1
 " ================ Appearance =======================
 set linespace=6
 set background=dark
-"colorscheme solarized
+colorscheme solarized
 
 if has('gui_running')
   set guioptions-=T   " Remove the toolbar
