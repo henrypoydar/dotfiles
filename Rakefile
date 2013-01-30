@@ -23,7 +23,7 @@ task :osx do
 end
 
 task :fonts do
-  msg "Consider changing your terminal font to 'Menlo for Powerline'"
+  msg "Consider changing your terminal font to 'Source Code Pro for Powerline'"
   sh "cp fonts/*.otf ~/Library/Fonts/."
 end
 
