@@ -37,13 +37,15 @@ task :brew_packages do
   msg "Update homebrew and formulae"
   sh "brew update"
 
-  %w(ack git ctags fasd macvim zsh-completions).each do |pkg|
+  ['ack', 'git', 'ctags', 'fasd', 'acvim', 
+   'macvim --override-system-vim', 'zsh-completions'].each do |pkg|
     msg "Installing #{pkg}"
     begin
       sh "brew install #{pkg}"
     rescue => e
       puts "Looks like #{pkg} is already installed"
     end
+    sh "brew linkapps"
   end
 
 end
