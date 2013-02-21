@@ -115,6 +115,8 @@ set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 let g:Powerline_symbols='Fancy'
 
+let g:syntastic_quiet_warnings=1 " Indicate syntax errors, not warnings
+
 " ================ Search Settings  =================
 
 set incsearch        " Find the next match as we type the search
