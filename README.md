@@ -51,6 +51,4 @@ Customed tailored for me. YMMV.
 * Rspecs (or Ruby code) will run out-of-band in Terminal.app via `Cmd+r`
 * Custom IR Black variant for MacVim color scheme (solarized is used outside of gui presence)
 
-### Miscellaneous
 
-* Includes shortcuts for my fork of Geeknote (https://github.com/hpoydar/geeknote), see `zsh/geeknote.zsh` for details
