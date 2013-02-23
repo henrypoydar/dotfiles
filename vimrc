@@ -105,7 +105,7 @@ if has('gui_running')
   set guioptions-=r " Hide right scrollbar
   set guioptions-=L " Hide left scrollbar
   if has('gui_macvim')
-    set transparency=0  " Make window completely opaque 
+    set transparency=0  " Make window completely opaque
     colorscheme ir_dark_gray " Use macvim optimized color scheme
   endif
 endif
@@ -259,4 +259,6 @@ map <leader>w :call WritingModeToggle()<cr>
 " Open markdown app in Marked
 map <leader>m :silent !open "%" -a /Applications/Marked.app<cr>:redraw!<cr>
 
+" Removes trailing whitspace while preserving search history
+nnoremap <silent> <leader>l :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<cr>
 
