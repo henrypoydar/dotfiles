@@ -4,7 +4,6 @@
 . ~/.zsh/colors.zsh
 . ~/.zsh/completions.zsh
 . ~/.zsh/fasd.zsh
-. ~/.zsh/geeknote.zsh
 . ~/.zsh/history.zsh
 . ~/.zsh/prompt.zsh
 . ~/.zsh/rbenv.zsh
