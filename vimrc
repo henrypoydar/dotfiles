@@ -61,6 +61,9 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 
+" CSS highlighting
+Bundle 'ap/vim-css-color'
+
 " Ruby
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-rails'
