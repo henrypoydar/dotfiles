@@ -1,0 +1,37 @@
+# Configs
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+config secondsBetweenRepeat 0.1
+config checkDefaultsOnLoad true
+config focusCheckWidthMax 3000
+
+# Monitor aliases
+alias mon-laptop      1680x1050
+alias mon-thunderbolt 2560x1440
+
+# Modal/sequence alias
+alias modal-seq cmd,8
+
+# Position aliases
+alias mid   move screenOriginX+screenSizeX/8;screenOriginY+screenSizeY/8 3*screenSizeX/4;3*screenSizeY/4
+alias left  move screenOriginX;screenOriginY                               screenSizeX/2;screenSizeY
+alias right move screenOriginX+screenSizeX/2;screenOriginY                 screenSizeX/2;screenSizeY
+alias fill  move screenOriginX;screenOriginY                               screenSizeX;screenSizeY
+# fill
+# full
+# left-gr
+# right-gr
+
+# Position bindings
+bind m:${modal-seq} ${mid}
+bind 0:${modal-seq} ${fill}
+bind 1:${modal-seq} ${left}
+bind 2:${modal-seq} ${right}
+
+# Grid
+bind 5:${modal-seq} grid
+
+# Window hints
+bind 6:${modal-seq} hint
+

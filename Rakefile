@@ -2,7 +2,7 @@ require 'rake'
 require 'erb'
 
 desc "Install dot files and dependencies"
-task :install => [:intro, :osx, :brew_packages, :zsh, :fonts, :misc, :vim, :outro]
+task :install => [:intro, :osx, :brew_packages, :zsh, :fonts, :slate, :misc, :vim, :outro]
 
 task :intro do
   puts ""
@@ -53,6 +53,15 @@ end
 task :zsh do
   msg "Installing zsh configuration"
   install_dotfiles('zsh*')
+end
+
+task :slate do
+  msg "Installing slate"
+  unless File.exist?("/Applications/Slate.app")
+    sh "cd /Applications && curl http://www.ninjamonkeysoftware.com/slate/versions/slate-latest.tar.gz | tar -xz"
+  end
+  install_dotfiles('slate*')
+  sh "open /Applications/Slate.app"
 end
 
 task :misc do
