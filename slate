@@ -9,6 +9,7 @@ config focusCheckWidthMax 3000
 # Monitor aliases
 alias mon-laptop      1680x1050
 alias mon-thunderbolt 2560x1440
+alias mon-air11       1366x768
 
 # Modal/sequence alias
 alias modal-seq cmd,ctrl
@@ -35,6 +36,7 @@ bind 5:${modal-seq} grid
 # Layouts
 
 default laptop resolutions:${mon-laptop}
+default air11  resolutions:${mon-air11}
 default laptop-thunderbolt resolutions:${mon-laptop};${mon-thunderbolt}
 
 layout laptop-thunderbolt 'Calendar'          move ${pos-mid} ${mon-thunderbolt}
@@ -54,3 +56,12 @@ layout laptop             'MacVim'            move ${pos-fill} ${mon-laptop}
 layout laptop             'Mailplane 3'       move ${pos-fill} ${mon-laptop}
 layout laptop             'Microsoft Outlook' move ${pos-fill} ${mon-laptop}
 layout laptop             'Things'            move ${pos-fill} ${mon-laptop}
+
+layout air11              'Calendar'          move ${pos-fill} ${mon-laptop}
+layout air11              'Google Chrome'     move ${pos-fill} ${mon-laptop}
+layout air11              'HipChat'           move ${pos-fill} ${mon-laptop}
+layout air11              'iTerm'             move ${pos-fill} ${mon-laptop}
+layout air11              'MacVim'            move ${pos-fill} ${mon-laptop}
+layout air11              'Mailplane 3'       move ${pos-fill} ${mon-laptop}
+layout air11              'Microsoft Outlook' move ${pos-fill} ${mon-laptop}
+layout air11              'Things'            move ${pos-fill} ${mon-laptop}
