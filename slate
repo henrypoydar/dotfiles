@@ -45,6 +45,7 @@ layout laptop-thunderbolt 'HipChat'           move ${pos-mid} ${mon-thunderbolt}
 layout laptop-thunderbolt 'iTerm'             move ${pos-mid} ${mon-thunderbolt}
 layout laptop-thunderbolt 'MacVim'            move ${pos-mid} ${mon-thunderbolt}
 layout laptop-thunderbolt 'Mailplane 3'       move ${pos-mid} ${mon-thunderbolt}
+layout laptop-thunderbolt 'Mail'              move ${pos-mid} ${mon-thunderbolt}
 layout laptop-thunderbolt 'Microsoft Outlook' move ${pos-mid} ${mon-thunderbolt}
 layout laptop-thunderbolt 'Things'            move ${pos-mid} ${mon-thunderbolt}
 
@@ -54,6 +55,7 @@ layout laptop             'HipChat'           move ${pos-fill} ${mon-laptop}
 layout laptop             'iTerm'             move ${pos-fill} ${mon-laptop}
 layout laptop             'MacVim'            move ${pos-fill} ${mon-laptop}
 layout laptop             'Mailplane 3'       move ${pos-fill} ${mon-laptop}
+layout laptop             'Mail'              move ${pos-fill} ${mon-laptop}
 layout laptop             'Microsoft Outlook' move ${pos-fill} ${mon-laptop}
 layout laptop             'Things'            move ${pos-fill} ${mon-laptop}
 
@@ -63,5 +65,6 @@ layout air11              'HipChat'           move ${pos-fill} ${mon-laptop}
 layout air11              'iTerm'             move ${pos-fill} ${mon-laptop}
 layout air11              'MacVim'            move ${pos-fill} ${mon-laptop}
 layout air11              'Mailplane 3'       move ${pos-fill} ${mon-laptop}
+layout air11              'Mail'              move ${pos-fill} ${mon-laptop}
 layout air11              'Microsoft Outlook' move ${pos-fill} ${mon-laptop}
 layout air11              'Things'            move ${pos-fill} ${mon-laptop}
