@@ -12,7 +12,7 @@ alias mon-thunderbolt 2560x1440
 alias mon-air11       1366x768
 
 # Modal/sequence alias
-alias modal-seq cmd,ctrl
+alias modal-seq cmd,shift
 
 # Position aliases
 alias pos-mid      screenOriginX+screenSizeX/8;screenOriginY+screenSizeY/8 3*screenSizeX/4;3*screenSizeY/4
