@@ -1,6 +1,6 @@
 function! RunInTerminal(file)
   if match(a:file, '_spec\.rb') != -1
-    let l:command = 'bundle exec rspec --tty'
+    let l:command = 'zeus rspec --tty'
   elseif match(a:file, '\.rb') != -1
     let l:command = 'ruby'
   endif
