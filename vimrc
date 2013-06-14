@@ -73,6 +73,9 @@ Bundle 'rodjek/vim-puppet'
 " Markdown
 Bundle 'plasticboy/vim-markdown'
 
+" Append close characters (parens, quotes, etc)
+Bundle 'Raimondi/delimitMate'
+
 " ================ General Config ====================
 
 set number                      "Line numbers are good
