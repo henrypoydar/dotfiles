@@ -37,8 +37,8 @@ task :brew_packages do
   msg "Update homebrew and formulae"
   sh "brew update"
 
-  ['ack', 'git', 'ctags', 'fasd', 'acvim', 
-   'macvim --override-system-vim', 'zsh-completions'].each do |pkg|
+  ['ack', 'git', 'ctags', 'fasd', 'acvim', 'cmake',
+   'macvim --force --override-system-vim', 'zsh-completions'].each do |pkg|
     msg "Installing #{pkg}"
     begin
       sh "brew install #{pkg}"
@@ -61,7 +61,6 @@ task :slate do
     sh "cd /Applications && curl http://www.ninjamonkeysoftware.com/slate/versions/slate-latest.tar.gz | tar -xz"
   end
   install_dotfiles('slate*')
-  sh "open /Applications/Slate.app"
 end
 
 task :misc do
@@ -79,6 +78,8 @@ task :vim do
   install_dotfiles('vimrc')
   sh "vim +BundleClean +qall"
   sh "vim +BundleInstall +qall"
+  msg "Running additional step for the YouCompleteMe plugin"
+  sh "cd ~/.vim/bundle/YouCompleteMe; ./install.sh --clang-completer"
 end
 
 def msg(m)
