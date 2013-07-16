@@ -49,7 +49,7 @@ if executable('ctags')
 endif
 
 " Code completion
-Bundle 'Valloric/YouCompleteMe'
+Bundle 'Shougo/neocomplcache'
 
 " Snippets
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -95,6 +95,9 @@ set hidden
 
 " Turn on syntax highlighting
 syntax on
+
+" Enable neocomplcache
+let g:neocomplcache_enable_at_startup=1
 
 " ================ Appearance =======================
 set linespace=6

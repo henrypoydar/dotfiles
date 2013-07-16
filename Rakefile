@@ -78,8 +78,6 @@ task :vim do
   install_dotfiles('vimrc')
   sh "vim +BundleClean +qall"
   sh "vim +BundleInstall +qall"
-  msg "Running additional step for the YouCompleteMe plugin"
-  sh "cd ~/.vim/bundle/YouCompleteMe; ./install.sh --clang-completer"
 end
 
 def msg(m)
