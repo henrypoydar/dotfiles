@@ -137,6 +137,10 @@ set nowb
 " ================ NERDTree display =================
 
 let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.rbc$', '\.rbo$', '\.git$', '\.DS_Store$', '\.class$', '\.o$', '\~$']
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let g:NERDTreeWinSize = 30
 
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
