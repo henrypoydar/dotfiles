@@ -134,6 +134,10 @@ set noswapfile
 set nobackup
 set nowb
 
+" ================ NERDTree display =================
+
+let NERDTreeShowHidden=1
+
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
 " Only works all the time.
