@@ -95,7 +95,7 @@ def install_dotfiles(dir_pattern)
         replace_file(file)
       else
         print "overwrite ~/.#{file.sub('.erb', '')}? [ynaq] "
-        case $stdin.gets.chomp  
+        case $stdin.gets.chomp
         when 'a'
           replace_all = true
           replace_file(file)

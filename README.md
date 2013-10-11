@@ -7,6 +7,14 @@ Originally forked from @ryanb, with pastes from @robbyrussell's
 oh-my-zsh effort, @devjj's vim-config, @holman, @skwp's YADR and open 
 sourced dotfiles from various other nerds.
 
+## OSX 10.9 Mavericks notes
+
+Had to install MacVim like so:
+
+    brew install https://raw.github.com/felixbuenemann/homebrew/81824e31564538e9df4d0552cf5063691f17c688/Library/Formula/macvim.rb --force --override-system-vim
+
+See http://alexpotrykus.com/blog/2013/08/13/brewing-vim-on-os-x-10-dot-9-mavericks/
+
 ## Prerequisites
 
 * Mac OSX 10.8+
@@ -50,5 +58,6 @@ Customed tailored for me. YMMV.
 * Special "writing mode" - toggle with `,w`
 * Rspecs (or Ruby code) will run out-of-band in Terminal.app via `Cmd+r`
 * Custom IR Black variant for MacVim color scheme (solarized is used outside of gui presence)
+
 
 

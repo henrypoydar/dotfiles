@@ -19,14 +19,14 @@ Bundle 'tpope/vim-fugitive'
 " File/directory view and utilities
 Bundle 'scrooloose/nerdtree'
 
-" Solarized color scheme
+" Color schemes
 Bundle 'altercation/vim-colors-solarized'
-
-" IR Dark Gray color scheme
 Bundle 'hpoydar/vim-colors-ir-dark-gray'
+Bundle 'baskerville/bubblegum'
+Bundle 'chriskempson/base16-vim'
 
 " Powerline
-Bundle 'skwp/vim-powerline'
+Bundle 'bling/vim-airline'
 
 " Surround
 Bundle 'tpope/vim-surround'
@@ -112,14 +112,19 @@ if has('gui_running')
   set guioptions-=L " Hide left scrollbar
   if has('gui_macvim')
     set transparency=0  " Make window completely opaque
-    colorscheme ir_dark_gray " Use macvim optimized color scheme
+    let base16colorspace=256
+    "colorscheme ir_dark_gray
+    "colorscheme solarized
+    "colorscheme bubblegum
+    colorscheme base16-default
   endif
 endif
 
-set colorcolumn=80 " Faint line will appear to mark 80 columns
+"set colorcolumn=80 " Faint line will appear to mark 80 columns
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
-let g:Powerline_symbols='Fancy'
+"let g:Powerline_symbols='Fancy'
+let g:airline_powerline_fonts = 1
 
 let g:syntastic_quiet_warnings=1 " Indicate syntax errors, not warnings
 
