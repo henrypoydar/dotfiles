@@ -117,6 +117,7 @@ if has('gui_running')
     "colorscheme solarized
     "colorscheme bubblegum
     colorscheme base16-default
+    hi NonText guifg=#202020 " Override to make whitespace chars a little less bright
   endif
 endif
 
@@ -125,7 +126,6 @@ set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 "let g:Powerline_symbols='Fancy'
 let g:airline_powerline_fonts = 1
-
 let g:syntastic_quiet_warnings=1 " Indicate syntax errors, not warnings
 
 " ================ Search Settings  =================
@@ -174,14 +174,15 @@ filetype indent on
 " Display tabs and trailing spaces visually
 set list listchars=tab:▸\ ,eol:¬,trail:·
 
-set nowrap       "Don't wrap lines
-set linebreak    "Wrap lines at convenient points
+set nowrap       " Don't wrap lines
+set linebreak    " Wrap lines at convenient points
 
 " ================ Folds ============================
 
-set foldmethod=indent   "fold based on indent
-set foldnestmax=3       "deepest fold is 3 levels
-set nofoldenable        "dont fold by default
+set foldmethod=indent   " Fold based on indent
+set foldnestmax=3       " Deepest fold is 3 levels
+set nofoldenable        " Dont fold by default
+let g:vim_markdown_folding_disabled=1 " Disable default folding in markdown documents
 
 " ================ Completion =======================
 
