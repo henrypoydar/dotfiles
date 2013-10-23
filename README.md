@@ -9,9 +9,10 @@ sourced dotfiles from various other nerds.
 
 ## OSX 10.9 Mavericks notes
 
-Had to install postgresql like so:
+For PostgreSQL, had to install XCode CLT first (download from Apple Developer site).
+Then don't forget to initialize a DB first (this isn't in the Homebrew post-install notes)
 
-    brew install --no-tcl postgresql
+    initdb /usr/local/var/postgres -E utf8
 
 Had to install MacVim like so:
 
