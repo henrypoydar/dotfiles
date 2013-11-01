@@ -16,14 +16,6 @@ Then don't forget to initialize a DB first (this isn't in the Homebrew post-inst
 
     initdb /usr/local/var/postgres -E utf8
 
-### MacVim
-
-Had to install MacVim like so:
-
-    brew install https://raw.github.com/felixbuenemann/homebrew/81824e31564538e9df4d0552cf5063691f17c688/Library/Formula/macvim.rb --force --override-system-vim
-
-See http://alexpotrykus.com/blog/2013/08/13/brewing-vim-on-os-x-10-dot-9-mavericks/
-
 ### General
 
 Other hints: https://gist.github.com/g3d/2709563
