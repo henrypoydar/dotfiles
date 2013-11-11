@@ -16,6 +16,10 @@ Then don't forget to initialize a DB first (this isn't in the Homebrew post-inst
 
     initdb /usr/local/var/postgres -E utf8
 
+### Java
+
+Use Java 7 from Oracle at http://www.java.com
+
 ### General
 
 Other hints: https://gist.github.com/g3d/2709563
