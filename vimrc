@@ -199,7 +199,7 @@ set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
-set iskeyword-=_
+"set iskeyword-=_
 
 " ================ Scrolling ========================
 
