@@ -21,9 +21,11 @@ alias pos-right    screenOriginX+screenSizeX/2;screenOriginY               scree
 alias pos-fill     screenOriginX;screenOriginY                             screenSizeX;screenSizeY
 alias pos-left-gr  screenOriginX;screenOriginY                             screenSizeX*.62;screenSizeY
 alias pos-right-gr screenOriginX+screenSizeX*.62;screenOriginY             screenSizeX*.38;screenSizeY
+alias pos-avg      screenOriginX;screenOriginY                             1366;768
 
 # Position bindings
 bind m:${modal-seq} move ${pos-mid}
+bind 3:${modal-seq} move ${pos-avg}
 bind 0:${modal-seq} move ${pos-fill}
 bind 6:${modal-seq} move ${pos-left}
 bind 7:${modal-seq} move ${pos-right}

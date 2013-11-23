@@ -33,7 +33,7 @@ Other hints: https://gist.github.com/g3d/2709563
 ### Setting shell to use the latest version of zsh
 
     brew install zsh
-    chsh -s /user/local/bin/zsh $USER
+    chsh -s /usr/local/bin/zsh $USER
 
 Then login again. `which zsh` should read `/usr/local/bin/zsh`
 

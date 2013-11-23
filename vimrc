@@ -107,7 +107,7 @@ colorscheme solarized
 if has('gui_running')
   set guioptions-=T   " Remove the toolbar
   "set gfn=Menlo\ for\ Powerline:h20
-  set gfn=Source\ Code\ Pro\ for\ Powerline:h18
+  set gfn=Source\ Code\ Pro\ for\ Powerline:h19
   set guioptions-=r " Hide right scrollbar
   set guioptions-=L " Hide left scrollbar
   if has('gui_macvim')
