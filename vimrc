@@ -76,6 +76,9 @@ Bundle 'plasticboy/vim-markdown'
 " Append close characters (parens, quotes, etc)
 Bundle 'Raimondi/delimitMate'
 
+" Ack functional
+Bundle 'mileszs/ack.vim'
+
 " ================ General Config ====================
 
 set number                      "Line numbers are good
