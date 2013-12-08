@@ -11,10 +11,8 @@ sourced dotfiles from various other nerds.
 
 ### PostgreSQL
 
-Install XCode CLT first, which is now a download from Apple Developer site.
-Then don't forget to initialize a DB first (this isn't in the Homebrew post-install notes):
-
-    initdb /usr/local/var/postgres -E utf8
+- Install XCode CLT first, which is now a download from Apple Developer site.
+- Install with http://postgresapp.com/ which also install PostGIS and plv8
 
 ### Java
 
