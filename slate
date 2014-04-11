@@ -9,8 +9,10 @@ config focusCheckWidthMax 3000
 # Monitor aliases
 alias mon-thunderbolt 2560x1440
 alias mon-air11       1366x768
-alias mon-mbpro15     2880x1800
-alias mon-mbpro13     2560x1600
+#alias mon-mbpro15     2880x1800
+alias mon-mbpro15     1440x900
+#alias mon-mbpro13     2560x1600
+alias mon-mbpro13     1280x800
 
 # Modal/sequence aliases
 alias modal-seq cmd,shift
