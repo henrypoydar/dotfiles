@@ -7,11 +7,14 @@ config checkDefaultsOnLoad true
 config focusCheckWidthMax 3000
 
 # Monitor aliases
-alias mon-laptop      1680x1050
 alias mon-thunderbolt 2560x1440
 alias mon-air11       1366x768
+#alias mon-mbpro15     2880x1800
+alias mon-mbpro15     1440x900
+#alias mon-mbpro13     2560x1600
+alias mon-mbpro13     1280x800
 
-# Modal/sequence alias
+# Modal/sequence aliases
 alias modal-seq cmd,shift
 
 # Position aliases
@@ -37,36 +40,57 @@ bind 5:${modal-seq} grid
 
 # Layouts
 
-default laptop resolutions:${mon-laptop}
-default air11  resolutions:${mon-air11}
-default laptop-thunderbolt resolutions:${mon-laptop};${mon-thunderbolt}
+default mbpro13 resolutions:${mon-mbpro13}
+default mbpro15 resolutions:${mon-mbpro15}
+default air11   resolutions:${mon-air11}
+default mbpro15-thunderbolt resolutions:${mon-mbpro15};${mon-thunderbolt}
 
-layout laptop-thunderbolt 'Calendar'          move ${pos-mid} ${mon-thunderbolt}
-layout laptop-thunderbolt 'Google Chrome'     move ${pos-mid} ${mon-thunderbolt}
-layout laptop-thunderbolt 'HipChat'           move ${pos-mid} ${mon-thunderbolt}
-layout laptop-thunderbolt 'iTerm'             move ${pos-mid} ${mon-thunderbolt}
-layout laptop-thunderbolt 'MacVim'            move ${pos-mid} ${mon-thunderbolt}
-layout laptop-thunderbolt 'Mailplane 3'       move ${pos-mid} ${mon-thunderbolt}
-layout laptop-thunderbolt 'Mail'              move ${pos-mid} ${mon-thunderbolt}
-layout laptop-thunderbolt 'Microsoft Outlook' move ${pos-mid} ${mon-thunderbolt}
-layout laptop-thunderbolt 'Things'            move ${pos-mid} ${mon-thunderbolt}
+layout mbpro15-thunderbolt 'Calendar'          move ${pos-mid} ${mon-thunderbolt}
+layout mbpro15-thunderbolt 'Google Chrome'     move ${pos-mid} ${mon-thunderbolt}
+layout mbpro15-thunderbolt 'HipChat'           move ${pos-mid} ${mon-thunderbolt}
+layout mbpro15-thunderbolt 'iTerm'             move ${pos-mid} ${mon-thunderbolt}
+layout mbpro15-thunderbolt 'MacVim'            move ${pos-mid} ${mon-thunderbolt}
+layout mbpro15-thunderbolt 'Sublime Text'      move ${pos-mid} ${mon-thunderbolt}
+layout mbpro15-thunderbolt 'Mailplane 3'       move ${pos-mid} ${mon-thunderbolt}
+layout mbpro15-thunderbolt 'Mail'              move ${pos-mid} ${mon-thunderbolt}
+layout mbpro15-thunderbolt 'Microsoft Outlook' move ${pos-mid} ${mon-thunderbolt}
+layout mbpro15-thunderbolt 'Things'            move ${pos-mid} ${mon-thunderbolt}
+layout mbpro15-thunderbolt 'Finder'            move ${pos-mid} ${mon-thunderbolt}
 
-layout laptop             'Calendar'          move ${pos-fill} ${mon-laptop}
-layout laptop             'Google Chrome'     move ${pos-fill} ${mon-laptop}
-layout laptop             'HipChat'           move ${pos-fill} ${mon-laptop}
-layout laptop             'iTerm'             move ${pos-fill} ${mon-laptop}
-layout laptop             'MacVim'            move ${pos-fill} ${mon-laptop}
-layout laptop             'Mailplane 3'       move ${pos-fill} ${mon-laptop}
-layout laptop             'Mail'              move ${pos-fill} ${mon-laptop}
-layout laptop             'Microsoft Outlook' move ${pos-fill} ${mon-laptop}
-layout laptop             'Things'            move ${pos-fill} ${mon-laptop}
+layout air11              'Calendar'          move ${pos-fill} ${mon-air11}
+layout air11              'Google Chrome'     move ${pos-fill} ${mon-air11}
+layout air11              'HipChat'           move ${pos-fill} ${mon-air11}
+layout air11              'iTerm'             move ${pos-fill} ${mon-air11}
+layout air11              'MacVim'            move ${pos-fill} ${mon-air11}
+layout air11              'Sublime Text'      move ${pos-fill} ${mon-air11}
+layout air11              'Mailplane 3'       move ${pos-fill} ${mon-air11}
+layout air11              'Mail'              move ${pos-fill} ${mon-air11}
+layout air11              'Microsoft Outlook' move ${pos-fill} ${mon-air11}
+layout air11              'Things'            move ${pos-fill} ${mon-air11}
+layout air11              'Finder'            move ${pos-mid} ${mon-air11}
 
-layout air11              'Calendar'          move ${pos-fill} ${mon-laptop}
-layout air11              'Google Chrome'     move ${pos-fill} ${mon-laptop}
-layout air11              'HipChat'           move ${pos-fill} ${mon-laptop}
-layout air11              'iTerm'             move ${pos-fill} ${mon-laptop}
-layout air11              'MacVim'            move ${pos-fill} ${mon-laptop}
-layout air11              'Mailplane 3'       move ${pos-fill} ${mon-laptop}
-layout air11              'Mail'              move ${pos-fill} ${mon-laptop}
-layout air11              'Microsoft Outlook' move ${pos-fill} ${mon-laptop}
-layout air11              'Things'            move ${pos-fill} ${mon-laptop}
+layout mbpro15            'Calendar'          move ${pos-fill} ${mon-mbpro15}
+layout mbpro15            'Google Chrome'     move ${pos-fill} ${mon-mbpro15}
+layout mbpro15            'HipChat'           move ${pos-fill} ${mon-mbpro15}
+layout mbpro15            'iTerm'             move ${pos-fill} ${mon-mbpro15}
+layout mbpro15            'MacVim'            move ${pos-fill} ${mon-mbpro15}
+layout mbpro15            'Sublime Text'      move ${pos-fill} ${mon-mbpro15}
+layout mbpro15            'Mailplane 3'       move ${pos-fill} ${mon-mbpro15}
+layout mbpro15            'Mail'              move ${pos-fill} ${mon-mbpro15}
+layout mbpro15            'Microsoft Outlook' move ${pos-fill} ${mon-mbpro15}
+layout mbpro15            'Things'            move ${pos-fill} ${mon-mbpro15}
+layout mbpro15            'Finder'            move ${pos-mid} ${mon-mbpro15}
+
+layout mbpro13            'Calendar'          move ${pos-fill} ${mon-mbpro13}
+layout mbpro13            'Google Chrome'     move ${pos-fill} ${mon-mbpro13}
+layout mbpro13            'HipChat'           move ${pos-fill} ${mon-mbpro13}
+layout mbpro13            'iTerm'             move ${pos-fill} ${mon-mbpro13}
+layout mbpro13            'Sublime Text'      move ${pos-fill} ${mon-mbpro13}
+layout mbpro13            'MacVim'            move ${pos-fill} ${mon-mbpro13}
+layout mbpro13            'Mailplane 3'       move ${pos-fill} ${mon-mbpro13}
+layout mbpro13            'Mail'              move ${pos-fill} ${mon-mbpro13}
+layout mbpro13            'Microsoft Outlook' move ${pos-fill} ${mon-mbpro13}
+layout mbpro13            'Things'            move ${pos-fill} ${mon-mbpro13}
+layout mbpro13            'Finder'            move ${pos-mid} ${mon-mbpro13}
+
+

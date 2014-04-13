@@ -64,7 +64,7 @@ task :slate do
 end
 
 task :misc do
-  %w(ackrc aprc editrc inputrc irbrc gemrc gitconfig.erb pryrc hushlogin).each do |f|
+  %w(ackrc aprc editrc inputrc irbrc gemrc gitconfig.erb pryrc hushlogin rspec  rp5rc).each do |f|
     msg "Installing #{f}"
     install_dotfiles(f)
   end
