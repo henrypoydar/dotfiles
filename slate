@@ -58,6 +58,7 @@ layout mbpro15-thunderbolt 'Things'            move ${pos-mid} ${mon-thunderbolt
 layout mbpro15-thunderbolt 'Finder'            move ${pos-mid} ${mon-thunderbolt}
 
 layout air11              'Calendar'          move ${pos-fill} ${mon-air11}
+layout air11              'Terminal'          move ${pos-fill} ${mon-air11}
 layout air11              'Google Chrome'     move ${pos-fill} ${mon-air11}
 layout air11              'HipChat'           move ${pos-fill} ${mon-air11}
 layout air11              'iTerm'             move ${pos-fill} ${mon-air11}
@@ -70,6 +71,7 @@ layout air11              'Things'            move ${pos-fill} ${mon-air11}
 layout air11              'Finder'            move ${pos-mid} ${mon-air11}
 
 layout mbpro15            'Calendar'          move ${pos-fill} ${mon-mbpro15}
+layout mbpro15            'Terminal'          move ${pos-fill} ${mon-mbpro15}
 layout mbpro15            'Google Chrome'     move ${pos-fill} ${mon-mbpro15}
 layout mbpro15            'HipChat'           move ${pos-fill} ${mon-mbpro15}
 layout mbpro15            'iTerm'             move ${pos-fill} ${mon-mbpro15}
@@ -82,6 +84,7 @@ layout mbpro15            'Things'            move ${pos-fill} ${mon-mbpro15}
 layout mbpro15            'Finder'            move ${pos-mid} ${mon-mbpro15}
 
 layout mbpro13            'Calendar'          move ${pos-fill} ${mon-mbpro13}
+layout mbpro13            'Terminal'          move ${pos-fill} ${mon-mbpro13}
 layout mbpro13            'Google Chrome'     move ${pos-fill} ${mon-mbpro13}
 layout mbpro13            'HipChat'           move ${pos-fill} ${mon-mbpro13}
 layout mbpro13            'iTerm'             move ${pos-fill} ${mon-mbpro13}
