@@ -48,8 +48,9 @@ layout mbpro13-dell27 'iTerm'             move ${pos-mid} ${mon-dell27}
 layout mbpro13-dell27 'LimeChat'          move ${pos-mid} ${mon-dell27}
 layout mbpro13-dell27 'MacVim'            move ${pos-mid} ${mon-dell27}
 layout mbpro13-dell27 'Mailplane 3'       move ${pos-mid} ${mon-dell27}
-layout mbpro13-dell27 'Sublime Text'      move ${pos-mid} ${mon-dell27}
+layout mbpro13-dell27 'Safari'            move ${pos-mid} ${mon-dell27}
 layout mbpro13-dell27 'Skype'             move ${pos-mid} ${mon-dell27}
+layout mbpro13-dell27 'Sublime Text'      move ${pos-mid} ${mon-dell27}
 layout mbpro13-dell27 'Terminal'          move ${pos-mid} ${mon-dell27}
 layout mbpro13-dell27 'Things'            move ${pos-mid} ${mon-dell27}
 
@@ -61,6 +62,7 @@ layout mbpro13        'iTerm'             move ${pos-fill} ${mon-mbpro13}
 layout mbpro13        'LimeChat'          move ${pos-fill} ${mon-mbpro13}
 layout mbpro13        'MacVim'            move ${pos-fill} ${mon-mbpro13}
 layout mbpro13        'Mailplane 3'       move ${pos-fill} ${mon-mbpro13}
+layout mbpro13        'Safari'            move ${pos-fill} ${mon-mbpro13}
 layout mbpro13        'Skype'             move ${pos-mid}  ${mon-mbpro13}
 layout mbpro13        'Sublime Text'      move ${pos-fill} ${mon-mbpro13}
 layout mbpro13        'Terminal'          move ${pos-fill} ${mon-mbpro13}
