@@ -38,7 +38,7 @@ task :brew_packages do
   sh "brew update"
 
   ['ack', 'git', 'ctags', 'fasd',
-   'macvim --force --override-system-vim', 'zsh-completions'].each do |pkg|
+   'macvim --force --with-override-system-vim', 'zsh-completions'].each do |pkg|
     msg "Installing #{pkg}"
     begin
       sh "brew install #{pkg}"
