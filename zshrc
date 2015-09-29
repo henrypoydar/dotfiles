@@ -8,7 +8,9 @@
 . ~/.zsh/java.zsh
 . ~/.zsh/prompt.zsh
 . ~/.zsh/rbenv.zsh
+. ~/.zsh/nvm.zsh
 . ~/.zsh/vimify.zsh
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
