@@ -20,7 +20,7 @@ function ruby_prompt_info() {
 }
 
 function node_prompt_info() {
-  nvm version | awk '{print $1}'
+  nvm version | awk '{print $1}' | tr 'v' ' '
 }
 
 local vi_insert_indicator='%F{gray}▸'
@@ -31,7 +31,7 @@ setopt prompt_subst
 
 # Default prompt
 PROMPT='${return_code} %F{white}%. %F{green}${vcs_info_msg_0_}%{$reset_color%}%B$%b '
-RPROMPT='%F{red}$(ruby_prompt_info) %F{blue}$(node_prompt_info)%{$reset_color%}'
+RPROMPT='%F{red}$(ruby_prompt_info)%F{blue}$(node_prompt_info)%{$reset_color%}'
 
 # Change the prompt for Vi modes
 function zle-line-init zle-keymap-select {
