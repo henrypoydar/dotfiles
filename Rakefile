@@ -24,6 +24,7 @@ end
 
 task :fonts do
   msg "Consider changing your terminal font to 'Source Code Pro for Powerline' or 'Office Code Pro'"
+BUNDLE_BUILD__EVENTMACHINE: "--with-cppflags=-I/usr/local/opt/openssl/include"
   sh "cp fonts/*.otf ~/Library/Fonts/."
 end
 
@@ -64,7 +65,7 @@ task :slate do
 end
 
 task :misc do
-  %w(ackrc aprc editrc inputrc irbrc gemrc gitconfig.erb pryrc hushlogin rspec  rp5rc).each do |f|
+  %w(ackrc aprc editrc inputrc irbrc gemrc gitconfig.erb npmrc pryrc hushlogin rspec  rp5rc).each do |f|
     msg "Installing #{f}"
     install_dotfiles(f)
   end
