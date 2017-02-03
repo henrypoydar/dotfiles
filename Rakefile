@@ -2,7 +2,7 @@ require 'rake'
 require 'erb'
 
 desc "Install dot files and dependencies"
-task :install => [:intro, :osx, :brew_packages, :zsh, :fonts, :slate, :misc, :vim, :outro]
+task :install => [:intro, :brew_packages, :zsh, :fonts, :misc, :vim, :outro]
 
 task :intro do
   puts ""
@@ -24,7 +24,6 @@ end
 
 task :fonts do
   msg "Consider changing your terminal font to 'Source Code Pro for Powerline' or 'Office Code Pro'"
-BUNDLE_BUILD__EVENTMACHINE: "--with-cppflags=-I/usr/local/opt/openssl/include"
   sh "cp fonts/*.otf ~/Library/Fonts/."
 end
 
@@ -38,7 +37,7 @@ task :brew_packages do
   msg "Update homebrew and formulae"
   sh "brew update"
 
-  ['ack', 'git', 'ctags', 'fasd',
+  ['zsh', 'ack', 'git', 'ctags', 'fasd', 'node', 'nvm', 
    'macvim --force --with-override-system-vim', 'zsh-completions'].each do |pkg|
     msg "Installing #{pkg}"
     begin
@@ -56,16 +55,9 @@ task :zsh do
   install_dotfiles('zsh*')
 end
 
-task :slate do
-  msg "Installing slate"
-  unless File.exist?("/Applications/Slate.app")
-    sh "cd /Applications && curl http://www.ninjamonkeysoftware.com/slate/versions/slate-latest.tar.gz | tar -xz"
-  end
-  install_dotfiles('slate*')
-end
 
 task :misc do
-  %w(ackrc aprc editrc inputrc irbrc gemrc gitconfig.erb npmrc pryrc hushlogin rspec  rp5rc).each do |f|
+  %w(ackrc aprc editrc inputrc irbrc gemrc gitconfig.erb npmrc pryrc hushlogin rspec rp5rc).each do |f|
     msg "Installing #{f}"
     install_dotfiles(f)
   end
