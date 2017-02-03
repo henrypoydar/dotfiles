@@ -15,7 +15,7 @@ Tested with OSX 10.12.3, "Sierra", as of this writing
 
 - Install XCode 
 - Install XCode command line tools: `xcode-select --install`
-- Install Postgres with http://postgresapp.com/ which also install PostGIS and plv8
+- Install Postgres with http://postgresapp.com/ (not via homebrew)
 
 ### Install
 
