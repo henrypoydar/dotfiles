@@ -30,13 +30,13 @@ local return_code="%(?,${vi_insert_indicator},%F{red}▸)"
 setopt prompt_subst
 
 # Default prompt
-PROMPT='${return_code} %F{white}%c %F{green}{vcs_info_msg_0_}%f%{$reset_color%}%B$%b '
+PROMPT='${return_code} %F{white}%c %F{green}${vcs_info_msg_0_}%f%{$reset_color%}$ '
 RPROMPT='%F{red}$(ruby_prompt_info)%F{blue}$(node_prompt_info)%{$reset_color%}'
 
 # Change the prompt for Vi modes
 function zle-line-init zle-keymap-select {
   local_vi_mode="${${KEYMAP/vicmd/${vi_normal_indicator}}/(main|viins)/${vi_insert_indicator}}"
-  PROMPT='${local_vi_mode} %F{white}%c %F{green}${vcs_info_msg_0_}%f%{$reset_color%}%B$%b '
+  PROMPT='${local_vi_mode} %F{white}%c %F{green}${vcs_info_msg_0_}%f%{$reset_color%}$ '
   zle reset-prompt
   }
 
