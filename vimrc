@@ -132,6 +132,12 @@ let g:airline_powerline_fonts = 1
 "let g:syntastic_quiet_warnings=1 " Indicate syntax errors, not warnings
 "g:syntastic_quiet_messages = {'level': 'warnings'}
 
+" Change cursor shape between insert and normal mode in iTerm2.app
+if $TERM_PROGRAM =~ "iTerm"
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+endif
+
 " ================ Search Settings  =================
 
 set incsearch        " Find the next match as we type the search
