@@ -7,15 +7,16 @@ Originally forked from @ryanb, with pastes from @robbyrussell's
 oh-my-zsh effort, @devjj's vim-config, @holman, @skwp's YADR and open
 sourced dotfiles from various other nerds.
 
-Tested with OSX 10.12.3, "Sierra", as of this writing
+Tested with OSX 10.13, "High Sierra", as of this writing
 
 ## Installation
 
 ### Prep
 
-- Install XCode 
+- Install XCode
 - Install XCode command line tools: `xcode-select --install`
 - Install Postgres with http://postgresapp.com/ (not via homebrew)
+- Install node and nvm with  http://yoember.com/nodejs/the-best-way-to-install-node-js/ (again, no brew)
 
 ### Install
 
