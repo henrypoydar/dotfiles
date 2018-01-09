@@ -30,7 +30,7 @@ local return_code="%(?,${vi_insert_indicator},%F{red}▸)"
 setopt prompt_subst
 
 # Default prompt
-PROMPT='${return_code} %F{white}%c %F{green}${vcs_info_msg_0_}%f%{$reset_color%}$ '
+PROMPT=' %F{white}%c %F{green}${vcs_info_msg_0_}%f%{$reset_color%}$ '
 RPROMPT='%F{red}$(ruby_prompt_info)%F{blue}$(node_prompt_info)%{$reset_color%}'
 
 # Change the prompt for Vi modes
