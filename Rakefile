@@ -45,7 +45,6 @@ task :brew_packages do
     rescue => e
       puts "Looks like #{pkg} is already installed"
     end
-    sh "brew linkapps"
   end
 
 end
