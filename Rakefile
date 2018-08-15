@@ -31,7 +31,7 @@ task :brew_packages do
 
   if not File.exists? "/usr/local/bin/brew"
     msg "Installing homebrew"
-    sh "ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+    sh '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
   end
 
   msg "Update homebrew and formulae"
