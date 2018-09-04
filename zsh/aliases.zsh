@@ -23,6 +23,10 @@ alias gba='git branch -a'
 alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
 
+# utilities
+alias cat='bat'
+alias ping='prettyping --nolegend'
+
 # so rake doesn't choke on zsh square brackets
 alias rake='noglob rake'
 
