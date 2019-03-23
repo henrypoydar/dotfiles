@@ -5,6 +5,7 @@
 . ~/.zsh/completions.zsh
 . ~/.zsh/fasd.zsh
 . ~/.zsh/history.zsh
+. ~/.zsh/golang.zsh
 . ~/.zsh/java.zsh
 . ~/.zsh/prompt.zsh
 . ~/.zsh/rbenv.zsh
@@ -23,3 +24,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
