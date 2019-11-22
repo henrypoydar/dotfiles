@@ -15,6 +15,7 @@ Tested with OSX 10.13, "High Sierra", as of this writing
 
 - Install XCode
 - Install XCode command line tools: `xcode-select --install`
+- Launch XCode and accept terms
 - Install Postgres with http://postgresapp.com/ (not via homebrew)
 - Install node and nvm with  http://yoember.com/nodejs/the-best-way-to-install-node-js/ (again, no brew)
 
