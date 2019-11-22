@@ -5,9 +5,10 @@ and other dot-configured packages.
 
 Originally forked from @ryanb, with pastes from @robbyrussell's
 oh-my-zsh effort, @devjj's vim-config, @holman, @skwp's YADR and open
-sourced dotfiles from various other nerds.
+sourced dotfiles from variols other nerds.
 
-Tested with OSX 10.13, "High Sierra", as of this writing
+Tested with OSX 10.15, "Catalina", as of this writing. Catalina (and
+presumably future versions) default to zsh instead of bash.
 
 ## Installation
 
@@ -17,23 +18,17 @@ Tested with OSX 10.13, "High Sierra", as of this writing
 - Install XCode command line tools: `xcode-select --install`
 - Launch XCode and accept terms
 - Install Postgres with http://postgresapp.com/ (not via homebrew)
-- Install node and nvm with  http://yoember.com/nodejs/the-best-way-to-install-node-js/ (again, no brew)
 
 ### Install
 
 - Git clone this repo into `~/dotfiles`
 - Run the script with `rake install`
 
-### Set the default shell to use the brew-installed of zsh
-
-    sudo dscl . change /users/$USER UserShell /bin/bash $(which zsh)
-
-Then login again. `which zsh` should read `/usr/local/bin/zsh`
-
 ### After Install
 
-- Use rbenv to install at globally set the latest Ruby version
-- Use nvm to install at globally set the latest Node and npm version
+- Use rbenv to install at globally set the latest Ruby version (homebrew)
+- Install node and nvm with  http://yoember.com/nodejs/the-best-way-to-install-node-js/ (no brew)
+- Use nvm to install and globally set the latest Node and npm version
 
 ## Highlights
 

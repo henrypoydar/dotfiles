@@ -17,11 +17,6 @@ task :outro do
   puts ""
 end
 
-task :osx do
-  msg "Setting up sane defaults for the OSX environment"
-  sh "./osx"
-end
-
 task :fonts do
   msg "Consider changing your terminal font to 'Source Code Pro for Powerline' or 'Office Code Pro'"
   sh "cp fonts/*.otf ~/Library/Fonts/."
@@ -36,7 +31,7 @@ task :brew_packages do
   msg "Update homebrew and formulae"
   sh "brew update"
 
-  ["zsh", "ack", "git", "ctags", "fasd", "bat", "fzf",
+  ["ack", "git", "ctags", "fasd", "bat", "fzf",
    "macvim --force --with-override-system-vim", "zsh-completions"].each do |pkg|
     msg "Installing #{pkg}"
     begin
