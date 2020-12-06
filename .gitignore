@@ -3,4 +3,5 @@ vim/backups
 vim/bundle/*
 vim/.*
 gitconfig
+zsh/pure
 
