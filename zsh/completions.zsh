@@ -1,21 +1,25 @@
-#
 # Sets completion options.
-#
-# Authors:
-#   Robby Russell <robby@planetargon.com>
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
 
 # Return if requirements are not found.
 if [[ "$TERM" == 'dumb' ]]; then
   return 1
 fi
 
-# Add zsh-completions to $fpath.
+# Add zsh-completions to $fpath
+# Assumes brew install
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-# Load and initialize the completion system ignoring insecure directories.
-autoload -Uz compinit && compinit -i
+COMP_DUMP_FILE="${ZDOTDIR:-$HOME}/.zcompdump"  # The path to the completion cache file.
+
+
+# Initialize but only regen cache file if it's older than 24 hours
+# https://gist.github.com/ctechols/ca1035271ad134841284
+autoload -Uz compinit 
+if [[ -n ${COMP_DUMP_FILE}(#qN.mh+24) ]]; then
+	compinit -i;
+else
+	compinit -C;
+fi;
 
 #
 # Options
@@ -39,7 +43,7 @@ WORDCHARS='*?_-.[]~&;!#$%^(){}<>'
 
 # Use caching to make completion for cammands such as dpkg and apt usable.
 zstyle ':completion::complete:*' use-cache on
-zstyle ':completion::complete:*' cache-path "${ZDOTDIR:-$HOME}/.zcompcache"
+zstyle ':completion::complete:*' cache-path "${COMP_DUMP_FILE}"
 
 # Case-insensitive (all), partial-word, and then substring completion.
 if zstyle -t ':prezto:module:completion:*' case-sensitive; then
