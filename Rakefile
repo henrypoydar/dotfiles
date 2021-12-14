@@ -23,9 +23,9 @@ task :fonts do
 end
 
 task :brew_packages do
-  if not File.exists? "/usr/local/bin/brew"
+  if not File.exists? "/opt/homebrew/bin/brew"
     msg "Installing homebrew"
-    sh '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+    sh '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
   end
 
   msg "Update homebrew and formulae"
