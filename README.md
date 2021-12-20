@@ -7,9 +7,15 @@ Originally forked from @ryanb, with pastes from @robbyrussell's
 oh-my-zsh effort, @devjj's vim-config, @holman, @skwp's YADR and open
 sourced dotfiles from variols other nerds.
 
-Tested with OSX 10.15, "Catalina", as of this writing. Catalina (and
-presumably future versions) default to zsh instead of bash.
+Tested with MacOS 12.1, "Monetery", as of this writing. 
 
+Customed tailored for me. YMMV.
+
+## Development Assumptions
+
+Previously, this setup assumed that local version management would be needed for things like Ruby (rbenv), Node (nvm), and PostgreSQL (postgres.app).
+
+Now the assumption is that version management is controlled at the project level with [Docker](https://www.docker.com/) or [asdf](https://github.com/asdf-vm/asdf).
 ## Installation
 
 ### Prep
@@ -17,22 +23,10 @@ presumably future versions) default to zsh instead of bash.
 - Install XCode
 - Install XCode command line tools: `xcode-select --install`
 - Launch XCode and accept terms
-- Install Postgres with http://postgresapp.com/ (not via homebrew)
-
 ### Install
 
-- Git clone this repo into `~/dotfiles`
-- Run the script with `rake install`
-
-### After Install
-
-- Use rbenv to install at globally set the latest Ruby version (homebrew)
-- Install node and nvm with  http://yoember.com/nodejs/the-best-way-to-install-node-js/ (no brew)
-- Use nvm to install and globally set the latest Node and npm version
-
-## Highlights
-
-Customed tailored for me. YMMV.
+- Git clone this repo into `~/dotfiles` (uses system git, but we'll install a fresh one via Homebrew in the next step)
+- Run the script with `rake install` (uses system Ruby)
 
 ### General
 
