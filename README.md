@@ -32,8 +32,9 @@ Now the assumption is that version management is controlled at the project level
 
 
 
-- [Docker desktop]
-- [asdf](http://asdf-vm.com/)
+Install [Docker desktop](https://www.docker.com/), install [asdf](http://asdf-vm.com/).
+
+Then:
 
     asdf add plugin nodejs
     asdf install nodejs latest
