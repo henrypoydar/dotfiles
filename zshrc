@@ -2,6 +2,7 @@
 # zmodload zsh/zprof
 
 . ~/.zsh/aliases.zsh
+. ~/.zsh/asdf.zsh
 . ~/.zsh/bindings.zsh
 . ~/.zsh/config.zsh
 . ~/.zsh/docker.zsh

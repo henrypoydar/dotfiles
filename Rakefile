@@ -31,7 +31,7 @@ task :brew_packages do
   msg "Update homebrew and formulae"
   sh "brew update"
 
-  ["ack", "git", "ctags", "fasd", "bat", "fzf",
+  ["ack", "asdf", "git", "ctags", "fasd", "bat", "fzf",
    "macvim --force --with-override-system-vim", "zsh-completions"].each do |pkg|
     msg "Installing #{pkg}"
     begin
