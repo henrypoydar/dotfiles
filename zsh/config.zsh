@@ -12,3 +12,6 @@ ulimit -n 8000
 set -o allexport
 source ~/.env
 set +o allexport
+
+# Fix NSCFConstantString initialize error
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
