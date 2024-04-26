@@ -36,7 +36,7 @@ task :brew_packages do
     msg "Installing #{pkg}"
     begin
       sh "brew install #{pkg}"
-    rescue StandardError => e
+    rescue StandardError
       puts "Looks like #{pkg} is already installed"
     end
   end
