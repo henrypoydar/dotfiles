@@ -32,7 +32,7 @@ task :brew_packages do
   sh 'brew update'
 
   ['ack', 'asdf', 'git', 'ctags', 'fasd', 'bat', 'fzf', 'powerlevel10k',
-   'macvim --force --with-override-system-vim', 'zsh-completions'].each do |pkg|
+   'neovim', 'zsh-completions'].each do |pkg|
     msg "Installing #{pkg}"
     begin
       sh "brew install #{pkg}"

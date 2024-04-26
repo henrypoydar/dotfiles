@@ -14,7 +14,6 @@ fi
 . ~/.zsh/fasd.zsh
 . ~/.zsh/fzf.zsh
 . ~/.zsh/history.zsh
-. ~/.zsh/vimify.zsh
 . ~/.zsh/yarn.zsh
 
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
