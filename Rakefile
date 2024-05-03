@@ -18,8 +18,12 @@ task :outro do
 end
 
 task :fonts do
-  msg "Change terminal font to 'JetBrainsMono Nerd Font'"
-  sh 'cp fonts/JetBrains*.ttf ~/Library/Fonts/.'
+  # msg "Change terminal font to 'JetBrainsMono Nerd Font'"
+  # sh 'cp fonts/JetBrains*.ttf ~/Library/Fonts/.'
+
+  msg "Installing Nerd Fonts with homebrew"
+  sh `brew tap homebrew/cask-fonts`
+  sh `brew install --cask font-jetbrains-mono-nerd-font`
 end
 
 task :brew_packages do
