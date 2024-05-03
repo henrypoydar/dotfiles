@@ -35,7 +35,7 @@ task :brew_packages do
   msg 'Update homebrew and formulae'
   sh 'brew update'
 
-  ['ack', 'asdf', 'git', 'ctags', 'fasd', 'bat', 'fzf', 'powerlevel10k',
+  ['ack', 'alacritty', 'asdf', 'git', 'ctags', 'fasd', 'bat', 'fzf', 'powerlevel10k',
    'neovim', 'zsh-completions'].each do |pkg|
     msg "Installing #{pkg}"
     begin
@@ -52,7 +52,7 @@ task :zsh do
 end
 
 task :misc do
-  %w[ackrc aprc editrc inputrc irbrc gemrc gitconfig.erb npmrc pryrc hushlogin rspec rp5rc].each do |f|
+  %w[ackrc aprc editrc inputrc irbrc gemrc gitconfig.erb npmrc pryrc hushlogin rspec rp5rc alacritty].each do |f|
     msg "Installing #{f}"
     install_dotfiles(f)
   end
